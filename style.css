@@ -1,0 +1,532 @@
+@media (max-width: 992px){.header-center{
+    display: none !important;
+}}
+@media (min-width: 992px){.account-icon{
+    display: none !important;
+}}
+@media (max-width: 992px){.account{
+    display: none !important;
+}}
+@media (max-width: 992px){.list-button-show-motorbike{
+  display: none ;
+}}
+@media (max-width: 992px){.list-button-show-car{
+  display: none ;
+}}
+.header{
+    position: fixed;
+    box-sizing: border-box;
+    background-color: #fff;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 30px;
+    align-items: center;
+    z-index: 1;
+}
+.header-center ul{
+    display: flex;  
+    list-style-type: none; 
+    padding: 0; /* Loại bỏ padding mặc định của danh sách */
+    margin: 0;
+    justify-content: space-between;
+}
+.header-center ul li {
+    margin: 0 18px;
+}
+.header-center a:hover {
+    color: rgb(89, 134, 218); /* Màu chữ khi di chuột vào */
+}
+.header-center a {
+    font-size: 17px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+body {
+    font-family: 'Mulish', sans-serif;
+    letter-spacing: -.02rem;
+    color: #1a1a1a;
+    font-weight: 400;
+    font-size: 16px;
+}
+.button-account ,.button-detail-car,.button-detail-motorbike{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 24px;
+    width: 171px;
+    background: #1464f4;
+    border-radius: 3px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: #fff!important;
+    height: auto;
+    box-sizing: border-box;
+    border: 1px solid #2c72c6;
+    margin-right: 1em;
+    text-decoration: none;
+}
+.button-resigter-receive-info{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 17px 24px;
+  width: 171px;
+  background: #1464f4;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: #fff!important;
+  height: auto;
+  box-sizing: border-box;
+  border: 1px solid #2c72c6;
+  text-decoration: none;
+}
+.button-account:hover, .button-account:focus ,.button-detail-car:hover ,.button-detail-car:focus,.button-detail-motorbike:hover ,.button-detail-motorbike:focus,.button-resigter-receive-info:hover,.button-resigter-receive-info:focus{
+    background: #fff;
+    color: #1464f4!important;
+    border-color: #1464f4
+}
+.account {
+    margin-right: 30px;
+}
+.account-icon{
+    margin-right: 30px;
+    margin-top:5px;
+}
+#menu span {
+    display: block;
+    position: absolute;
+    height: 0;
+    width: 100%;
+    border-bottom: 2px #1f2125 solid;
+    border-radius: 0;
+    opacity: 1;
+    left: 0
+}
+#menu span:last-child {
+    width: 100%
+}
+#menu span:nth-child(1) {
+    top: 0
+}
+
+#menu span:nth-child(2) {
+    top: 5.5px
+}
+#menu span:nth-child(3) {
+    bottom: 0
+}
+#menu {
+    width: 20px;
+    height: 13px;
+    position: relative;
+    cursor: pointer;
+} 
+.head-right{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-right: 20px;
+}
+.menu-content.active {
+    display: flex;
+  }
+  .body-gioi-thieu.actives{
+    display: flex;
+  }
+  .body-gioi-thieu{
+    display: none;
+  }
+  .body-dich-vu.actives{
+    display: flex;
+  }
+  .body-dich-vu{
+    display: none;
+  }
+.menu-content {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    flex-direction: column;
+    min-height: 100%;
+    height: fit-content;
+    width: 17.9166666667%;
+    min-width: 344px;
+    top: 0;
+    right: 0;
+    color: #3c3c3c;
+    background-color: rgb(241, 241, 241);
+    padding: 30px;
+}
+.icon-x{
+    margin-top: 19px;
+    margin-right: 15px; 
+}
+.box-icon-x{
+    display: flex;
+    justify-content: flex-end;
+}
+.menu-content-m{
+    display: flex;
+    flex-direction: column;
+    bottom: 0;
+    left: 0;
+    display: block;
+    box-sizing: border-box;
+}
+.menu-content-m div {
+    padding-top: 25px; /* Màu chữ khi di chuột vào */
+    padding-bottom: 25px; 
+    border-radius: 5px;
+}
+.menu-content-m div:hover {
+    background-color: rgba(117, 162, 246, 0.3);
+}
+.menu-content-m a {
+    margin-left: 20px;
+    font-size: 17px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #1a1a1a;
+} 
+.position-indicator{
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    bottom: 0;
+    background-image: linear-gradient(to top,rgba(26, 27, 29, 0.618), rgba(0, 0, 0, 0));
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+   }
+   .position-indicator span{
+    width: 20px;
+    height: 20px;
+    margin-right: 20px; 
+    margin-bottom: 20px;
+    cursor: pointer;
+    background: #fff;
+    opacity: 0.5;
+    border-radius: 50%;
+   }
+   .position-indicator span.active{
+    background: #edeff1 !important;
+    opacity: 1 !important;
+   }
+   .mySlides{
+    display: none;
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+.mySlides.active {
+    display: flex;
+  }
+  .slideshow-container{
+    display: flex;
+  }
+   .fade {
+    animation: fade 1s;
+  }
+  
+  @keyframes fade {
+    from {
+      opacity: 0.4;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  } 
+  
+  .prev, .next {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: rgb(30, 29, 29);
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s, opacity 0.3s;
+  }
+  .prev:hover, .next:hover {
+    background-color: rgb(240, 240, 246);
+    color: rgb(20, 88, 182);
+    opacity: 1;
+}
+  
+  .prev {
+    left: 20px;
+
+  }
+  
+  .next {
+    right: 20px;
+
+  }
+  .body-main{
+    position: relative;
+    height: 100%;
+    object-fit: cover;
+  }
+  html,body {
+    height: 100%;
+}
+.show-car, .show-motorbike{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.button-show-car,.button-show-motorbike{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 150px;
+  padding-right: 150px;
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+.button-show-car .list-button-show-car {
+  cursor: pointer;
+  } 
+  .button-show-motorbike .list-button-show-motorbike {
+    cursor: pointer;
+    } 
+  .img-car, .img-motorbike{
+    display: none;
+  }
+  .img-VF5.active, .img-Evo200Lite.active{
+    display: flex !important;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .img-VFe34.active, .img-FelizS34.active{
+    display: flex !important;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .img-VF7.active , .img-KlaraS.active{
+    display: flex !important;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .img-VF8.active ,  .img-VentoS.active{
+    display: flex !important;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .img-VF9.active, .img-TheonS.active{
+    display: flex !important;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .img-VF6.active, .img-Evo200.active{
+    display: flex !important;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .show-car .prev {
+    left: 100px;
+
+  }
+  .show-motorbike .prev {
+    left: 100px;
+
+  }
+  
+  .show-car .next {
+    right: 100px;
+
+  }
+  .show-motorbike .next {
+    right: 100px;
+
+  }
+
+  .info-car-detail, .info-motorbike-detail{
+    text-align: center;
+  }
+  .info-car-detail p{
+    font-weight: 600;
+  }
+  .info-motorbike-detail p{
+    font-weight: 600;
+  }
+  .detail-car, .detail-motorbike{
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .V-info-car, .V-info-motorbike{
+    display: none;
+  }
+  .V-info-car.active{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 250px;
+    align-items: center;
+  }
+  .V-info-motorbike.active{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 250px;
+    align-items: center;
+  }
+  .receive-info{
+    display: flex;
+    justify-content: center;
+    padding: 6rem 0;
+    margin-top: 6rem;
+    background: url(https://vinfastauto.com/themes/porto/img/homepage-v2/join-the-charge.webp) no-repeat scroll left center transparent;
+    background-size: cover;
+}
+.detail-receive-info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.detail-receive-info-1{
+  font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 600;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 20px;
+}
+.detail-receive-info-2{
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 150%;
+  color: #fff;
+  margin-bottom: 20px;
+}
+.detail-receive-info-3{
+  color: #fff;
+  font-size: .75rem;
+  font-weight: 400;
+  line-height: 150%;
+  margin-top: 20px;
+}
+.form-email{
+    width: 500px;
+    height: 46.6px;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    box-shadow: none;
+    background: #fff;
+    border: none;
+    /* padding:20px 30px; */
+    border-radius: 0;
+}
+.form-email:focus {
+  outline: none; /* Loại bỏ viền focus mặc định của trình duyệt */
+}
+.detail-receive-info-4{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.footer-main{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 0;
+}
+.footer-main-1{
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: space-between;
+  width: 50%;
+}
+.footer-main-2{
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: space-between;
+  width: 25%;
+}
+.footer-main-2 div{
+  padding: 20px;
+  font-weight: 700;
+    font-size: 14px;
+    line-height: 150%;
+    text-transform: uppercase;
+
+}
+.footer-main-2 div a{
+  text-decoration: none;
+  color: #3c3c3c !important;
+}
+.footer-main-3 a{
+  text-decoration: none;
+}
+.footer-main-3{
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: start;
+  width: 25%;
+}
+.footer-main-1-content{
+  max-width: 500px;
+}
+.ecosystem-copy-right{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.copy-right{
+  font-style: normal;
+  font-weight: 400;
+  font-size: .75rem;
+  line-height: 1.5rem;
+  letter-spacing: -.02rem;
+  color: #3c3c3c;
+}
+.bct-wrapper{
+  margin-right: 20px;
+}
+.social-item{
+  margin-right: 30px;
+}
+.hotline-email{
+  display: flex;
+  flex-direction: column;
+}
+.connect-vf{
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
