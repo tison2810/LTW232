@@ -1,0 +1,114 @@
+DROP DATABASE VINFAST;
+CREATE DATABASE VINFAST;
+USE VINFAST;
+
+CREATE TABLE KhachHang (
+    ID INT AUTO_INCREMENT,
+    SoDienThoai CHAR(10),
+    MatKhau VARCHAR(20) NOT NULL,
+    HoTen VARCHAR(255) NOT NULL,
+    NgaySinh DATE,
+    GioiTinh CHAR(1),
+    Email VARCHAR(255) UNIQUE NOT NULL,
+    Diachi VARCHAR(1000),
+    NgayTao DATETIME,
+    NgayCapNhat DATETIME,
+    PRIMARY KEY (ID)
+);
+
+CREATE TABLE Oto (
+    ID INT AUTO_INCREMENT,
+    Ten VARCHAR(255) NOT NULL,
+    Anh VARCHAR(255),
+    MoTa TEXT(65535),
+    GiaGomPin INT,
+    GiaKhongPin INT,
+    Dai INT,
+    Rong INT,
+    Cao INT,
+    DungLuongPin FLOAT,
+    Lazang VARCHAR(255),
+    MucTieuThu INT,
+    SoGhe INT,
+    ThoiGianNap INT,
+    TuiKhi INT,
+    PRIMARY KEY (ID)
+);
+
+CREATE TABLE XeMay (
+    ID INT AUTO_INCREMENT,
+    Ten VARCHAR(255) NOT NULL,
+    Anh VARCHAR(255),
+    MoTa TEXT(65535),
+    Gia INT,
+    TocDoToiDa INT,
+    QuangDuongDiChuyen INT,
+    DoRongCop INT,
+    MauSac VARCHAR(255),
+    ThoiGianSac VARCHAR(255),
+    DongCo VARCHAR(255),
+    CongSuat VARCHAR(255),
+    GiamXoc VARCHAR(255),
+    Pin VARCHAR(255),
+    TuoiThoPin VARCHAR(255),
+    TrongLuong VARCHAR(255),
+    KhoangSangGamXe VARCHAR(255),
+    Phanh VARCHAR(255),
+    PRIMARY KEY (ID)
+);
+
+CREATE TABLE KhachThemOto (
+    Email VARCHAR(30) NOT NULL,
+    ID INT NOT NULL,
+    SoLuong INT NOT NULL,
+    PRIMARY KEY(Email, ID)
+);
+ALTER TABLE KhachThemOto
+ADD CONSTRAINT FK__ThemOto_TDN FOREIGN KEY (Email) REFERENCES KhachHang(Email),
+ADD CONSTRAINT FK__ThemOto_ID FOREIGN KEY (ID) REFERENCES Oto(ID);
+
+CREATE TABLE KhachThemXeMay (
+    Email VARCHAR(30) NOT NULL,
+    ID INT NOT NULL,
+    SoLuong INT NOT NULL,
+    PRIMARY KEY(Email, ID)
+);
+ALTER TABLE KhachThemXeMay
+ADD CONSTRAINT FK__ThemXeMay_TDN FOREIGN KEY (Email) REFERENCES KhachHang(Email),
+ADD CONSTRAINT FK__ThemXeMay_ID FOREIGN KEY (ID) REFERENCES XeMay(ID);
+
+CREATE TABLE DonHang (
+    ID INT AUTO_INCREMENT,
+    Email VARCHAR(30) NOT NULL,
+    TongTien INT,
+    NgayTao DATETIME,
+    XacNhan CHAR(20),
+    DiaChi TEXT(65535) NOT NULL,
+    PRIMARY KEY(ID)
+);
+ALTER TABLE DonHang
+ADD CONSTRAINT FK__DonHang__TDN FOREIGN KEY (Email) REFERENCES KhachHang(Email);
+
+CREATE TABLE DangKyNhanTin (
+    ID INT AUTO_INCREMENT,
+    Email VARCHAR(255) NOT NULL,
+    PRIMARY KEY(ID)
+);
+
+CREATE TABLE DangKyTuVan (
+    ID INT AUTO_INCREMENT,
+    Email VARCHAR(255) NOT NULL,
+    HoTen VARCHAR(255) NOT NULL,
+    SoDienThoai CHAR(10) NOT NULL,
+    PRIMARY KEY(ID)
+);
+
+CREATE TABLE NhanVien (
+    ID INT AUTO_INCREMENT,
+    Email VARCHAR(20) NOT NULL,
+    MatKhau VARCHAR(20) NOT NULL,
+    HoTen VARCHAR(255) NOT NULL,
+    SoDienThoai CHAR(10) NOT NULL,
+    GioiTinh CHAR(1),
+    PRIMARY KEY (ID)
+);
