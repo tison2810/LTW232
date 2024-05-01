@@ -17,7 +17,7 @@
             <!-- icon -->
             <div>
                 <!-- return main page -->
-                <a href="#">
+                <a href="login.php">
                     <img class="logo-main" alt="VinFast-logo"
                         src="https://vinfastauto.com/themes/porto/img/new-home-page/VinFast-logo.svg">
                 </a>
@@ -45,7 +45,7 @@
             <div class="head-right">
                 <!-- Account -->
                 <div class="account">
-                    <a class="button-account" href="#">TÀI KHOẢN</a>
+                    <a class="button-account" href="./view/login.php">TÀI KHOẢN</a>
                 </div>
                 <div class="account-icon">
                     <a href="#"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"

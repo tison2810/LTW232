@@ -1,174 +1,146 @@
-<?php
-require_once('connection.php');
+<?php  
 
-$salt = 'abcdefgh';
+require_once 'RBAC.php';
+class User {
+    private $id;
+    private $username;
+    private $firstName;
+    private $lastName;
+    private $email;
+    private $password;
+    private $phone;
+    private $address;
+    private $role;
+    private $createdAt;
+    private $updatedAt;
 
-class User
-{
-    public $email;
-    public $name;
-    public $gender;
-    public $birthday;
-    public $phone;
-    public $createAt;
-    public $updateAt;
-    public $password;
+    public function __construct($id, $username, $firstName, $lastName, $email, $password, $phone, $address, $role, $createdAt, $updatedAt) {
+        $this->id = $id;
+        $this->setUsername($username);
+        $this->setFirstName($firstName);
+        $this->setLastName($lastName);
+        $this->setEmail($email);
+        $this->setPassword($password);
+        $this->setPhone($phone);
+        $this->setAddress($address);
+        $this->setRole($role);
+        $this->createdAt = $createdAt;
+        $this->updatedAt = $updatedAt;
+    }
 
-    public function __construct($email, $name, $gender, $birthday, $phone, $createAt, $updateAt, $password)
-    {
+    public function getId() {
+        return $this->id;
+    }
+
+    public function getUsername() {
+        return $this->username;
+    }
+
+    public function getFirstName() {
+        return $this->firstName;
+    }
+
+    public function getLastName() {
+        return $this->lastName;
+    }
+
+    public function getEmail() {
+        return $this->email;
+    }
+
+    public function getPassword() {
+        return $this->password;
+    }
+
+    public function getPhone() {
+        return $this->phone;
+    }
+
+    public function getAddress() {
+        return $this->address;
+    }
+
+    public function getRole() {
+        return $this->role;
+    }
+
+    public function getCreatedAt() {
+        return $this->createdAt;
+    }
+
+    public function getUpdatedAt() {
+        return $this->updatedAt;
+    }
+
+    public function setRole($role) {
+        if (!Role::isValidRole($role)) {
+            throw new InvalidArgumentException("Invalid role provided");
+        }
+        $this->role = $role;
+    }
+
+    public function toString() {
+        $output = "";
+        $output .= "ID: " . $this->id . "\n";
+        $output .= "Username: " . $this->username . "\n";
+        $output .= "First Name: " . $this->firstName . "\n";
+        $output .= "Last Name: " . $this->lastName . "\n";
+        $output .= "Email: " . $this->email . "\n";
+        $output .= "Phone: " . $this->phone . "\n";
+        $output .= "Address: " . $this->address . "\n";
+        $output .= "Role: " . $this->role . "\n";
+        $output .= "Created At: " . $this->createdAt . "\n";
+        $output .= "Updated At: " . $this->updatedAt . "\n";
+        return $output;
+    }
+    
+    public function setUsername($username) {
+        if (strlen($username) < 3 || strlen($username) > 50) {
+            throw new InvalidArgumentException("Username must be between 3 and 50 characters");
+        }
+        $this->username = $username;
+    }
+
+    public function setFirstName($firstName) {
+        if (strlen($firstName) > 50) {
+            throw new InvalidArgumentException("First name must not exceed 50 characters");
+        }
+        $this->firstName = $firstName;
+    }
+
+    public function setLastName($lastName) {
+        if (strlen($lastName) > 50) {
+            throw new InvalidArgumentException("Last name must not exceed 50 characters");
+        }
+        $this->lastName = $lastName;
+    }
+
+    public function setEmail($email) {
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL) || strlen($email) > 100) {
+            throw new InvalidArgumentException("Invalid email address or email address exceeds 100 characters");
+        }
         $this->email = $email;
-        $this->name = $name;
-        $this->gender = $gender;
-        $this->birthday = $birthday;
-        $this->phone = $phone;
-        $this->createAt = $createAt;
-        $this->updateAt = $updateAt;
+    }
+
+    public function setPassword($password) {
+        if (strlen($password) < 8 || strlen($password) > 100) {
+            throw new InvalidArgumentException("Password must be between 8 and 100 characters");
+        }
         $this->password = $password;
     }
 
-    static function getAll()
-    {
-        $db = DB::getInstance();
-        $req = $db->query(
-            "SELECT *
-            FROM user;"
-        );
-        $users = [];
-        foreach($req->fetch_all(MYSQLI_ASSOC) as $user) {
-            $users[] = new User(
-                $user['email'],
-                $user['name'],
-                $user['gender'],
-                $user['birthday'],
-                $user['phone'],
-                $user['createAt'],
-                $user['updateAt'],
-                '' // Do not return password
-            );
+    public function setPhone($phone) {
+        if (strlen($phone) > 20) {
+            throw new InvalidArgumentException("Phone number must not exceed 20 characters");
         }
-        return $users;
+        $this->phone = $phone;
     }
 
-    static function get($email)
-    {
-        $db = DB::getInstance();
-        $req = $db->query(
-            "
-            SELECT email, name, gender, birthday, phone, createAt, updateAt 
-            FROM user
-            WHERE email = '$email'
-            ;"
-        );
-    
-        // Check if the query returned any results
-        if ($req->num_rows === 0) {
-            return null; // or handle accordingly based on your logic
+    public function setAddress($address) {
+        if (strlen($address) > 100) {
+            throw new InvalidArgumentException("Address must not exceed 100 characters");
         }
-    
-        $result = $req->fetch_assoc();
-        $user = new User(
-            $result['email'],
-            $result['name'],
-            $result['gender'],
-            $result['birthday'],
-            $result['phone'],
-            $result['createAt'],
-            $result['updateAt'],
-            '' // Do not return password
-        );
-    
-        return $user;
-    }
-    
-
-    static function insert($email, $profile_photo, $fname, $lname, $gender, $birthday, $phone, $password)
-    {
-        global $salt;
-        $password_hash = password_hash($password . $salt, PASSWORD_DEFAULT);
-        $db = DB::getInstance();
-        $req = $db->query(
-            "
-            INSERT INTO user (email, profile_photo, fname, lname, gender, birthday, phone, createAt, updateAt, password)
-            VALUES ('$email', '$profile_photo', '$fname', '$lname', $gender, $birthday, '$phone', NOW(), NOW(), '$password_hash')
-            ;");
-        return $req;
-    }
-
-    static function delete($email)
-    {
-        $db = DB::getInstance();
-        $req = $db->query("DELETE FROM user WHERE email = '$email';");
-        return $req;
-    }
-
-    static function update($email, $profile_photo, $fname, $lname, $gender, $birthday, $phone)
-    {
-        $db = DB::getInstance();
-        $req = $db->query(
-            "
-            UPDATE user
-            SET profile_photo = '$profile_photo', fname = '$fname', lname = '$lname', gender = $gender, birthday = $birthday, phone = '$phone', updateAt = NOW()
-            WHERE email = '$email'
-            ;"
-        );
-        return $req;
-    }
-
-    static function validation($email, $password)
-    {
-        global $salt;
-        $db = DB::getInstance();
-        $req = $db->query("SELECT * FROM user WHERE email = '$email'");
-        if (@password_verify($password . $salt, $req->fetch_assoc()['password']))
-            return true;
-        else
-            return false;
-    }
-
-    static function validateRegister($email)
-    {
-        $db = DB::getInstance();
-
-        $stmt = $db->prepare("SELECT * FROM user WHERE email = ?");
-        $stmt->bind_param("s", $email);
-        $stmt->execute();
-
-        $result = $stmt->get_result();
-
-        if ($result->num_rows > 0) {
-            $stmt->close();
-            return false;
-        }
-
-        $stmt->close();
-        return true;
-    }
-
-    static function changePassword($email, $oldpassword, $newpassword)
-    {
-        if (User::validation($email, $oldpassword)) {
-            $password_hash = password_hash($newpassword, PASSWORD_DEFAULT);
-            $db = DB::getInstance();
-            $req = $db->query(
-                "UPDATE user
-                SET password = '$password_hash', updateAt = NOW()
-                WHERE email = '$email';");
-            return $req;
-        } else {
-            return false;
-        }
-    }
-
-    static function changePassword_($email, $newpassword)
-    {
-        global $salt;
-        $password_hash = password_hash($newpassword . $salt, PASSWORD_DEFAULT);
-        $db = DB::getInstance();
-        $req = $db->query(
-            "UPDATE user
-            SET password = '$password_hash', updateAt = NOW()
-            WHERE email = '$email';");
-        return $req;
+        $this->address = $address;
     }
 }
 
