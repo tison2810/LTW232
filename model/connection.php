@@ -1,25 +1,16 @@
 <?php
-class DB
-{
-    public static $instance = NULL;
-    public static function getInstance() 
-    {
-        if (!isset(self::$instance)) 
-        {
-            try{
-                self::$instance = mysqli_connect("localhost", "root", "", "web");
-                if (mysqli_connect_errno())
-                {
-                    die("Failed to connect to MySQL: " . mysqli_connect_error());
-                }    
-            }
-            catch (mysqli_sql_exception $e) {
-                include_once("./views/error/index.php");
-                exit();
-            }
-            
-        }
+$servername = "localhost";
+$username = "root";
+$password = "";
+$db_name = "bkshop";
 
-        return self::$instance;
-    }
+try {
+	$conn = new PDO("mysql:host=$servername;dbname=$db_name", $username, $password);
+	// set the PDO error mode to exception
+	$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	// echo "Database connected successfully \r\n", PHP_EOL;
+} catch (PDOException $e) {
+	// echo "Database connection failed: " . $e->getMessage();
 }
+
+?>

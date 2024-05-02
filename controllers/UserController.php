@@ -1,5 +1,5 @@
 <?php
-require_once 'config/config.php';
+require_once 'model/connection.php';
 require_once 'model/SessionManager.php';
 require_once 'model/User.php';
 require_once 'model/RBAC.php';
@@ -27,17 +27,17 @@ class UserController
         }
 
         if (isset($_POST['login'])) {
-            $username = $_POST['username'];
+            $email = $_POST['email'];
             $password = $_POST['password'];
 
-            if ($this->authService->login($username, $password)) {
+            if ($this->authService->login($email, $password)) {
                 header("Location: /");
                 exit;
             } else {
-                $errorMessage = 'Incorrect username or password';
+                $errorMessage = 'Incorrect email or password';
             }
         }
-        require_once 'app/views/login.php';
+        require_once 'views/login.php';
     }
 
     public function logout()

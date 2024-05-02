@@ -25,14 +25,9 @@
                         <h3 class="fw-bold text-center mt-2">ĐĂNG NHẬP</h3>
                     </div>
 					
-                    <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-                        <input class="form-control mt-3" type="text" name="email" placeholder="Email">
-                    </div>
+                    <input class="form-control mt-3" type="text" name="email" placeholder="Email">
 					
-					
-					<div class="wrap-input100 validate-input" data-validate="Password is required">
-						<input class="form-control mt-3" type="password" name="password" placeholder="Password">
-					</div>
+					<input class="form-control mt-3" type="password" name="password" placeholder="Password">
 
 					<?php
 						if (isset($err))
@@ -52,7 +47,7 @@
 					</div>
 
 					<div class="container-login100-form-btn">
-						<button class="form btn btn-outline-primary mt-3" name="submit-btn" style="font-size: 20px; font-weight: bold;">
+						<button class="form btn btn-outline-primary mt-3" name="login" style="font-size: 20px; font-weight: bold;">
 							Đăng nhập
 						</button>
 					</div>

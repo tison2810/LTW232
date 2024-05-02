@@ -67,9 +67,7 @@ class UserRepository
     {
         return new User(
             $data['id'],
-            $data['username'],
-            $data['first_name'],
-            $data['last_name'],
+            $data['name'],
             $data['email'],
             $data['password'],
             $data['phone'],
@@ -83,9 +81,7 @@ class UserRepository
     public function updateAdmin(User $user)
     {
         $sql = "UPDATE users SET 
-            username = :username, 
-            first_name = :first_name, 
-            last_name = :last_name, 
+            name = :name, 
             email = :email, 
             phone = :phone, 
             address = :address, 
@@ -94,18 +90,14 @@ class UserRepository
         $stmt = $this->conn->prepare($sql);
 
         $id = $user->getId();
-        $username = $user->getUsername();
-        $first_name = $user->getFirstName();
-        $last_name = $user->getLastName();
+        $name = $user->getName();
         $email = $user->getEmail();
         $phone = $user->getPhone();
         $address = $user->getAddress();
         $role = $user->getRole();
 
         $stmt->bindParam(':id', $id, PDO::PARAM_INT);
-        $stmt->bindParam(':username', $username, PDO::PARAM_STR);
-        $stmt->bindParam(':first_name', $first_name, PDO::PARAM_STR);
-        $stmt->bindParam(':last_name', $last_name, PDO::PARAM_STR);
+        $stmt->bindParam(':name', $name, PDO::PARAM_STR);
         $stmt->bindParam(':email', $email, PDO::PARAM_STR);
         $stmt->bindParam(':phone', $phone, PDO::PARAM_STR);
         $stmt->bindParam(':address', $address, PDO::PARAM_STR);
@@ -116,8 +108,7 @@ class UserRepository
     public function updateUser(User $user)
     {
         $sql = "UPDATE users SET 
-        first_name = :first_name, 
-        last_name = :last_name, 
+        name = :name, 
         email = :email, 
         password = :password,
         phone = :phone, 
@@ -127,8 +118,7 @@ class UserRepository
         $stmt = $this->conn->prepare($sql);
 
         $id = $user->getId();
-        $firstName = $user->getFirstName();
-        $lastName = $user->getLastName();
+        $name = $user->getName();
         $email = $user->getEmail();
         $password = $user->getPassword();
         $phone = $user->getPhone();
@@ -136,8 +126,7 @@ class UserRepository
 
 
         $stmt->bindParam(':id', $id, PDO::PARAM_INT);
-        $stmt->bindParam(':first_name', $firstName, PDO::PARAM_STR);
-        $stmt->bindParam(':last_name', $lastName, PDO::PARAM_STR);
+        $stmt->bindParam(':name', $name, PDO::PARAM_STR);
         $stmt->bindParam(':email', $email, PDO::PARAM_STR);
         $stmt->bindParam(':password', $password, PDO::PARAM_STR);
         $stmt->bindParam(':phone', $phone, PDO::PARAM_STR);

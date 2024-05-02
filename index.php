@@ -5,7 +5,7 @@
 // require_once 'app/models/RBAC.php';
 // require_once 'app/services/AuthenticationService.php';
 // require_once 'app/models/UserRepository.php';
-require_once 'app/controllers/UserController.php';
+require_once 'controllers/UserController.php';
 // require_once 'app/middlewares/AuthMiddleware.php';
 // require_once 'app/controllers/AdminController.php';
 
