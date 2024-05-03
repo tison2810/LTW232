@@ -4,90 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>demo</title>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css" />
+    <script src="../script.js"></script>
+    <link rel="stylesheet" href="../style.css" />
     <link
       id="import_link_font_icon"
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Mulish:300,400,600,700&amp;display=swap&amp;subset=vietnamese"
     />
   </head>
-
+<?php
+    include_once('navbar.php');
+?>
   <body>
-    <header>
-      <div class="header">
-      <!-- icon -->
-      <div>
-        <!-- return main page -->
-        <a href="#">
-          <img
-            class="logo-main"
-            alt="VinFast-logo"
-            src="https://vinfastauto.com/themes/porto/img/new-home-page/VinFast-logo.svg"
-          />
-        </a>
-      </div>
-      <!-- head-center -->
-      <div class="header-center">
-        <ul>
-          <!-- Return Giới thiệu page -->
-          <li>
-            <a href="#" target="_self" class="gioithieu">Giới thiệu</a>
-          </li>
-          <li>
-            <a href="#" class="car-header">Ô tô</a>
-          </li>
-          <li>
-            <a href="#">Xe máy điện</a>
-          </li>
-          <!-- Return Dịch vụ page -->
-          <li>
-            <a href="#" target="_self" class="dichvu">Dịch vụ</a>
-          </li>
-        </ul>
-      </div>
-
-      <!-- head-right -->
-      <div class="head-right">
-        <!-- Account -->
-        <div class="account">
-          <a class="button-account" href="#">TÀI KHOẢN</a>
-        </div>
-        <div class="account-icon">
-          <a href="#">
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M8 8C10.21 8 12 6.21 12 4C12 1.79 10.21 0 8 0C5.79 0 4 1.79 4 4C4 6.21 5.79 8 8 8ZM8 10C5.33 10 0 11.34 0 14V16H16V14C16 11.34 10.67 10 8 10Z"
-                fill="#7A99AC"
-              ></path>
-            </svg>
-          </a>
-        </div>
-        <!-- Menu-content -->
-        <div id="menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
-    </header>
+    
   <br/><br/>
 
   <br/><br/>
 
   <video width="100%" height="100%" autoplay controls loop>
-      <source src="image/intro.mp4" type="video/mp4">
+      <source src="../image/intro.mp4" type="video/mp4">
   </video>
   
   <div class = "img-banner1">
     <img
-          src="image/vinfast1.jpg"
+          src="../image/vinfast1.jpg"
           style="width: 100%"
         />
   </div>
@@ -102,7 +42,7 @@
 
   <div class = "img-banner2">
     <img
-          src="image/vinfast2.jpg"
+          src="../image/vinfast2.jpg"
           style="width: 100%"
     />
   </div>
@@ -135,14 +75,14 @@
 <div class="container">
   <div class="box-vinfast34">
     <img
-      src="image/vinfast3.jpg"
+      src="../image/vinfast3.jpg"
       alt="Vinfast8"
     />
   </div>
 
   <div class="box-vinfast34">
     <img
-      src="image/vinfast4.jpg"
+      src="../image/vinfast4.jpg"
       alt="Vinfast9"
     />
   </div>
@@ -153,7 +93,7 @@
 <div class="grid-container">
   <div class="grid-item">
     <img
-      src="image/thuonghieu1.jpg"
+      src="../image/thuonghieu1.jpg"
       alt="Hình ảnh 1"
     />
     <p>15.08.2023</p>
@@ -162,7 +102,7 @@
 
   <div class="grid-item">
     <img
-      src="image/thuonghieu2.jpg"
+      src="../image/thuonghieu2.jpg"
       alt="Hình ảnh 2"
     />
     <p>21.04.2023</p>
@@ -171,7 +111,7 @@
 
   <div class="grid-item">
     <img
-      src="image/thuonghieu3.jpg"
+      src="../image/thuonghieu3.jpg"
       alt="Hình ảnh 3"
     />
     <p>27.03.2023</p>
@@ -180,7 +120,7 @@
 
   <div class="grid-item">
     <img
-      src="image/thuonghieu4.jpg"
+      src="../image/thuonghieu4.jpg"
       alt="Hình ảnh 4"
     />
     <p>26.04.2023</p>
@@ -192,7 +132,7 @@
 <div class="body-main">
   <div class="mySlides fade">
     <img
-      src="image/Prize1.png"
+      src="../image/Prize1.png"
     />
     <div>
       <p style="font-size: 40px; margin-left: 200px; margin-top: 150px; text-align:left">Giải thưởng</p>
@@ -203,7 +143,7 @@
 
   <div class="mySlides fade">
     <img
-      src="image/Prize2.png"
+      src="../image/Prize2.png"
     />
     <div>
       <p style="font-size: 40px; margin-left: 200px; margin-top: 150px; text-align:left">Giải thưởng</p>
@@ -214,7 +154,7 @@
 
   <div class="mySlides fade">
     <img
-      src="image/Prize3.png"
+      src="../image/Prize3.png"
     />
     <div>
       <p style="font-size: 40px; margin-left: 200px; margin-top: 150px; text-align:left">Giải thưởng</p>
@@ -225,7 +165,7 @@
 
   <div class="mySlides fade">
     <img
-      src="image/Prize4.png"
+      src="../image/Prize4.png"
     />
     <div>
       <p style="font-size: 40px; margin-left: 200px; margin-top: 150px; text-align:left">Giải thưởng</p>
@@ -236,7 +176,7 @@
 
   <div class="mySlides fade">
     <img
-      src="image/Prize5.png"
+      src="../image/Prize5.png"
     />
     <div>
       <p style="font-size: 40px; margin-left: 200px; margin-top: 150px; text-align:left">Giải thưởng</p>
@@ -247,7 +187,7 @@
 
   <div class="mySlides fade">
     <img
-      src="image/Prize6.png"
+      src="../image/Prize6.png"
     />
     <div>
       <p style="font-size: 40px; margin-left: 200px; margin-top: 150px; text-align:left">Giải thưởng</p>

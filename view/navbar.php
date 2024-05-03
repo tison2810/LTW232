@@ -42,9 +42,17 @@
             <!-- head-right -->
             <div class="head-right">
                 <!-- Account -->
-                <div class="account">
-                    <a class="button-account" href="#">TÀI KHOẢN</a>
-                </div>
+                <?php if ($authService !== null && $authService->isLoggedIn()): ?>
+                    <div class="account">
+                        <a class="button-account" href="#">
+                            <?php echo $authService->getLoggedInUser()->getName(); ?>
+                        </a>
+                    </div>
+                <?php else: ?>
+                    <div class="account">
+                        <a class="button-account" href="view/login.php">TÀI KHOẢN</a>
+                    </div>
+                <?php endif; ?>
                 <div class="account-icon">
                     <a href="#"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                             xmlns="http://www.w3.org/2000/svg">

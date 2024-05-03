@@ -10,7 +10,9 @@
     <link id="import_link_font_icon" rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Mulish:300,400,600,700&amp;display=swap&amp;subset=vietnamese">
 </head>
-
+<?php
+    include('view/navbar.php');
+    ?>
 <body>
     <header>
         <div class="header">
@@ -27,7 +29,7 @@
                 <ul>
                     <!-- Return Giới thiệu page -->
                     <li>
-                        <a href="#" target="_self" class="gioithieu">Giới thiệu</a>
+                        <a href="/introduction" target="_self" class="gioithieu">Giới thiệu</a>
                     </li>
                     <li>
                         <a href="#" class="car-header">Ô tô</a>

@@ -52,7 +52,7 @@ if (isset($_GET['action'])) {
         $adminController->deleteUser($_GET['id']);
         exit;
     } elseif ($_GET['action'] == 'introduction') {
-        require_once 'app/views/introduction.php';
+        require_once 'view/introduction.php';
         exit;
     } elseif ($_GET['action'] == 'news') {
         require_once 'app/views/news.php';
