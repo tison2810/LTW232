@@ -10,7 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
 <?php
-  		include_once('./navbar.php');
+  		include_once('navbar.php');
 ?>
 <body>
 	<div class = "limiter">
@@ -20,7 +20,7 @@
 				</div>
 			</div> -->
 			<div class="container mt-3" style="width: 400px">
-				<form action="index.php?page=main&controller=login&action=index" method="POST" class="validate-form login100-form">
+				<form action="../index.php?action=login" method="POST">
                     <div class="row">
                         <h3 class="fw-bold text-center mt-2">ĐĂNG NHẬP</h3>
                     </div>
@@ -47,7 +47,7 @@
 					</div>
 
 					<div class="container-login100-form-btn">
-						<button class="form btn btn-outline-primary mt-3" name="login" style="font-size: 20px; font-weight: bold;">
+						<button class="form btn btn-outline-primary mt-3" type="submit" name="login" style="font-size: 20px; font-weight: bold;">
 							Đăng nhập
 						</button>
 					</div>

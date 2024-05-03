@@ -37,7 +37,7 @@ class UserController
                 $errorMessage = 'Incorrect email or password';
             }
         }
-        require_once 'views/login.php';
+        require_once 'view/login.php';
     }
 
     public function logout()
@@ -76,7 +76,7 @@ class UserController
             }
         }
 
-        require_once '../view/register.php';
+        require_once 'view/register.php';
     }
 
     public function profile()

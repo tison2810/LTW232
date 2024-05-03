@@ -9,10 +9,10 @@ class User {
     private $phone;
     private $address;
     // private $role;
-    private $createdAt;
-    private $updatedAt;
+    // private $createdAt;
+    // private $updatedAt;
 
-    public function __construct($id, $name, $email, $password, $phone, $address, $createdAt, $updatedAt) {
+    public function __construct($id, $name, $email, $password, $phone, $address) {
         $this->id = $id;
         $this->setName($name);
         $this->setEmail($email);
@@ -20,8 +20,8 @@ class User {
         $this->setPhone($phone);
         $this->setAddress($address);
         // $this->setRole($role);
-        $this->createdAt = $createdAt;
-        $this->updatedAt = $updatedAt;
+        // $this->createdAt = $createdAt;
+        // $this->updatedAt = $updatedAt;
     }
 
     public function getId() {
@@ -52,13 +52,13 @@ class User {
     //     return $this->role;
     // }
 
-    public function getCreatedAt() {
-        return $this->createdAt;
-    }
+    // public function getCreatedAt() {
+    //     return $this->createdAt;
+    // }
 
-    public function getUpdatedAt() {
-        return $this->updatedAt;
-    }
+    // public function getUpdatedAt() {
+    //     return $this->updatedAt;
+    // }
 
     // public function setRole($role) {
     //     if (!Role::isValidRole($role)) {
@@ -75,8 +75,8 @@ class User {
         $output .= "Phone: " . $this->phone . "\n";
         $output .= "Address: " . $this->address . "\n";
         // $output .= "Role: " . $this->role . "\n";
-        $output .= "Created At: " . $this->createdAt . "\n";
-        $output .= "Updated At: " . $this->updatedAt . "\n";
+        // $output .= "Created At: " . $this->createdAt . "\n";
+        // $output .= "Updated At: " . $this->updatedAt . "\n";
         return $output;
     }
     

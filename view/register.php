@@ -16,17 +16,17 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
 <?php
-  		include_once('./navbar.php');
+  		include_once('navbar.php');
 ?>
 <body>
 	<div class = "limiter">
 		<div class="container-login100">
-			<div class="container mt-3" style="width: 400px">
-				<form method="POST">
+			<div class="container mt-3" style=" width: 400px">
+                <form method="POST" action="../index.php?action=register">
                     <div class="row">
                         <h3 class="fw-bold text-center mt-2">ĐĂNG KÝ</h3>
                     </div>
-					
+
                     <input class="form-control mt-3" type="text" name="email" id="email" placeholder="Email">
 					
 					<input class="form-control mt-3" type="password" name="password" id="password" placeholder="Mật khẩu">

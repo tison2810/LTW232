@@ -7,12 +7,8 @@ CREATE TABLE KhachHang (
     SoDienThoai CHAR(10),
     MatKhau VARCHAR(255) NOT NULL,
     HoTen VARCHAR(255) NOT NULL,
-    NgaySinh DATE,
-    GioiTinh CHAR(1),
     Email VARCHAR(255) UNIQUE NOT NULL,
     Diachi VARCHAR(1000),
-    NgayTao DATETIME,
-    NgayCapNhat DATETIME,
     PRIMARY KEY (ID)
 );
 

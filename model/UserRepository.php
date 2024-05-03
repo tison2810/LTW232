@@ -58,6 +58,11 @@ class UserRepository
         $userData = $stmt->fetch(PDO::FETCH_ASSOC);
 
         if ($userData) {
+            if ($userData) {
+                print_r($userData);
+                // Or if you want formatted output:
+                // echo '<pre>', print_r($userData, true), '</pre>';
+            }
             return $this->createUserFromData($userData);
         }
         return null;
@@ -66,14 +71,12 @@ class UserRepository
     private function createUserFromData($data)
     {
         return new User(
-            $data['id'],
-            $data['name'],
-            $data['email'],
-            $data['password'],
-            $data['phone'],
-            $data['address'],
-            $data['created_at'],
-            $data['updated_at']
+            $data['ID'],
+            $data['HoTen'],
+            $data['Email'],
+            $data['MatKhau'],
+            $data['SoDienThoai'],
+            $data['Diachi']
         );
     }
 
