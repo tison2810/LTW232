@@ -1,0 +1,33 @@
+RewriteEngine On
+
+# Rewrite URLs for user authentication
+RewriteRule ^logout/?$ index.php?action=logout [L]
+RewriteRule ^register/?$ index.php?action=register [L]
+RewriteRule ^login/?$ index.php?action=login [L]
+
+# Rewrite URLs for admin actions
+RewriteRule ^dashboard/?$ index.php?action=dashboard [L]
+RewriteRule ^admin/?$ index.php?action=view_user [L]
+RewriteRule ^admin/edit/([0-9]+)/?$ index.php?action=edit_user&id=$1 [L]
+RewriteRule ^admin/update/([0-9]+)/?$ index.php?action=update_user&id=$1 [L]
+RewriteRule ^admin/delete/([0-9]+)/?$ index.php?action=delete_user&id=$1 [L]
+
+#Rewrite URLs for site routing
+RewriteRule ^introduction/?$ index.php?action=introduction [L]
+RewriteRule ^news/?$ index.php?action=news [L]
+RewriteRule ^payment/?$ index.php?action=payment [L]
+RewriteRule ^contact/?$ index.php?action=contact [L]
+RewriteRule ^list/?$ index.php?action=list [L]
+RewriteRule ^cart/?$ index.php?action=cart [L]
+
+
+# Rewrite URLs for profile actions
+RewriteRule ^profile/?$ index.php?action=profile [L]
+RewriteRule ^update_profile/?$ index.php?action=update_profile [L]
+RewriteRule ^profile/change_info/?$ index.php?action=change_info [L]
+RewriteRule ^profile/change_password/?$ index.php?action=change_password [L]
+RewriteRule ^profile/site_settings/?$ index.php?action=site_settings [L]
+RewriteRule ^profile/change_password_handler/?$ index.php?action=change_password_handler [L]
+RewriteRule ^profile/delete_account/?$ index.php?action=delete_account [L]
+
+RewriteRule ^/?$ index.php [L]

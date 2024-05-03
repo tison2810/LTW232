@@ -12,8 +12,8 @@ class AuthenticateService {
         $this->sessionManager = $sessionManager;
     }
 
-    public function login($username, $password){
-        $user = $this->userRepository->findByUsername($username);
+    public function login($email, $password){
+        $user = $this->userRepository->findByEmail($email);
 
         if ($user && password_verify($password, $user->getPassword())) {
             $this->sessionManager->set('user', $user);
@@ -35,28 +35,22 @@ class AuthenticateService {
         return $user != null;
     }
 
-    private function is_username_exist($username) {
-        $user = $this->userRepository->findByUsername($username);
-        return $user != null;
-    }
+    // private function is_username_exist($username) {
+    //     $user = $this->userRepository->findByUsername($username);
+    //     return $user != null;
+    // }
 
 
-    public function register($username, $firstName, $lastName, $email, $password, $phone, $address, $role) {
+    public function register($name, $email, $password, $phone, $address) {
         if ($this->is_email_exist($email)) {
             return [
                 'success' => false,
                 'message' => 'Error: Email already in use'
             ];
         }
-        if ($this->is_username_exist($username)) {
-            return [
-                'success' => false,
-                'message' => 'Error: Username already in use'
-            ];
-        }
         
         $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-        $createUserResult = $this->userRepository->createUser($username, $firstName, $lastName, $email, $hashedPassword, $phone, $address, $role);
+        $createUserResult = $this->userRepository->createUser($name, $email, $hashedPassword, $phone, $address);
     
         return [
             'success' => $createUserResult,

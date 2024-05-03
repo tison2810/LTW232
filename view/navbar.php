@@ -1,15 +1,3 @@
-<?php
-  if(!isset($_SESSION)) 
-  { 
-      session_start(); 
-  }
-  if (isset($_SESSION['guest']))
-  {
-    require_once('models/user.php');
-    $data = User::get($_SESSION['guest']);
-  }
-  
-?>
 <!DOCTYPE html>
 <html lang="vi">
 
@@ -17,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>demo</title>
-    <script src="script.js"></script>
+    <!-- <script src="script.js"></script> -->
     <link rel="stylesheet" href="../style.css">
     <link id="import_link_font_icon" rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Mulish:300,400,600,700&amp;display=swap&amp;subset=vietnamese">

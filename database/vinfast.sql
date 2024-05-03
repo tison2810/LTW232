@@ -5,7 +5,7 @@ USE VINFAST;
 CREATE TABLE KhachHang (
     ID INT AUTO_INCREMENT,
     SoDienThoai CHAR(10),
-    MatKhau VARCHAR(20) NOT NULL,
+    MatKhau VARCHAR(255) NOT NULL,
     HoTen VARCHAR(255) NOT NULL,
     NgaySinh DATE,
     GioiTinh CHAR(1),

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>demo</title>
-    <script src="script.js"></script>
+    <!-- <script src="script.js"></script> -->
     <link rel="stylesheet" href="style.css">
     <link id="import_link_font_icon" rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Mulish:300,400,600,700&amp;display=swap&amp;subset=vietnamese">

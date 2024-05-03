@@ -1,21 +1,21 @@
 <?php
-// require_once 'app/config/config.php';
-// require_once 'app/models/SessionManager.php';
-// require_once 'app/models/User.php';
-// require_once 'app/models/RBAC.php';
-// require_once 'app/services/AuthenticationService.php';
-// require_once 'app/models/UserRepository.php';
+require_once 'model/connection.php';
+require_once 'model/SessionManager.php';
+require_once 'model/User.php';
+require_once 'model/RBAC.php';
+require_once 'services/AuthenticationService.php';
+require_once 'model/UserRepository.php';
 require_once 'controllers/UserController.php';
-// require_once 'app/middlewares/AuthMiddleware.php';
-// require_once 'app/controllers/AdminController.php';
+require_once 'middlewares/AuthMiddleware.php';
+require_once 'controllers/AdminController.php';
 
 
-// $sessionManager = new SessionManager();
-// $userRepository = new UserRepository($conn);
-// $authMiddleware = new AuthMiddleware($sessionManager);
-// $authService = new AuthenticateService($userRepository, $sessionManager);
+$sessionManager = new SessionManager();
+$userRepository = new UserRepository($conn);
+$authMiddleware = new AuthMiddleware($sessionManager);
+$authService = new AuthenticateService($userRepository, $sessionManager);
 $userController = new UserController($authService, $userRepository, $sessionManager);
-// $adminController = new AdminController($userRepository, $authService, $sessionManager, $authMiddleware);
+$adminController = new AdminController($userRepository, $authService, $sessionManager, $authMiddleware);
 
 if (isset($_GET['action'])) {
     if ($_GET['action'] == 'logout') {
@@ -101,6 +101,6 @@ if (isset($_GET['action'])) {
     }
 } else {
     // Redirect to the homepage
-    require_once 'app/views/home.php';
+    require_once 'indextemp.php';
     exit;
 }

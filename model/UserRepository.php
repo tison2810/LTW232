@@ -35,23 +35,23 @@ class UserRepository
         return $this->createUserFromData($userData);
     }
 
-    public function findByUsername($username)
-    {
-        $sql = "SELECT * FROM users WHERE username = :username";
-        $stmt = $this->conn->prepare($sql);
-        $stmt->bindParam(':username', $username, PDO::PARAM_STR);
-        $stmt->execute();
-        $userData = $stmt->fetch(PDO::FETCH_ASSOC);
+    // public function findByEmail($email)
+    // {
+    //     $sql = "SELECT * FROM KhachHang WHERE Email = :email";
+    //     $stmt = $this->conn->prepare($sql);
+    //     $stmt->bindParam(':email', $email, PDO::PARAM_STR);
+    //     $stmt->execute();
+    //     $userData = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        if ($userData) {
-            return $this->createUserFromData($userData);
-        }
-        return null;
-    }
+    //     if ($userData) {
+    //         return $this->createUserFromData($userData);
+    //     }
+    //     return null;
+    // }
 
     public function findByEmail($email)
     {
-        $sql = "SELECT * FROM users WHERE email = :email";
+        $sql = "SELECT * FROM khachhang WHERE Email = :email";
         $stmt = $this->conn->prepare($sql);
         $stmt->bindParam(':email', $email, PDO::PARAM_STR);
         $stmt->execute();
@@ -72,7 +72,6 @@ class UserRepository
             $data['password'],
             $data['phone'],
             $data['address'],
-            $data['role'],
             $data['created_at'],
             $data['updated_at']
         );
@@ -85,7 +84,7 @@ class UserRepository
             email = :email, 
             phone = :phone, 
             address = :address, 
-            role = :role 
+            -- role = :role 
             WHERE id = :id";
         $stmt = $this->conn->prepare($sql);
 
@@ -94,14 +93,14 @@ class UserRepository
         $email = $user->getEmail();
         $phone = $user->getPhone();
         $address = $user->getAddress();
-        $role = $user->getRole();
+        // $role = $user->getRole();
 
         $stmt->bindParam(':id', $id, PDO::PARAM_INT);
         $stmt->bindParam(':name', $name, PDO::PARAM_STR);
         $stmt->bindParam(':email', $email, PDO::PARAM_STR);
         $stmt->bindParam(':phone', $phone, PDO::PARAM_STR);
         $stmt->bindParam(':address', $address, PDO::PARAM_STR);
-        $stmt->bindParam(':role', $role, PDO::PARAM_STR);
+        // $stmt->bindParam(':role', $role, PDO::PARAM_STR);
         $stmt->execute();
     }
 
@@ -144,19 +143,17 @@ class UserRepository
 
 
 
-    public function createUser($username, $firstName, $lastName, $email, $password, $phone, $address, $role)
+    public function createUser($name, $email, $password, $phone, $address)
     {
-        $sql = "INSERT INTO users (username, first_name, last_name, email, password, phone, address, role) VALUES (:username, :first_name, :last_name, :email, :password, :phone, :address, :role)";
+        $sql = "INSERT INTO khachhang (HoTen, Email, MatKhau, SoDienThoai, Diachi) VALUES (:name, :email, :password, :phone, :address)";
         $stmt = $this->conn->prepare($sql);
 
-        $stmt->bindParam(':username', $username, PDO::PARAM_STR);
-        $stmt->bindParam(':first_name', $firstName, PDO::PARAM_STR);
-        $stmt->bindParam(':last_name', $lastName, PDO::PARAM_STR);
+        $stmt->bindParam(':name', $name, PDO::PARAM_STR);
         $stmt->bindParam(':email', $email, PDO::PARAM_STR);
         $stmt->bindParam(':password', $password, PDO::PARAM_STR);
         $stmt->bindParam(':phone', $phone, PDO::PARAM_STR);
         $stmt->bindParam(':address', $address, PDO::PARAM_STR);
-        $stmt->bindParam(':role', $role, PDO::PARAM_STR);
+        // $stmt->bindParam(':role', $role, PDO::PARAM_STR);
 
         return $stmt->execute();
     }

@@ -59,16 +59,14 @@ class UserController
         $errorMessage = '';
 
         if (isset($_POST['register'])) {
-            $username = $_POST['username'];
-            $firstName = $_POST['first_name'];
-            $lastName = $_POST['last_name'];
+            $name = $_POST['name'];
             $email = $_POST['email'];
             $password = $_POST['password'];
             $phone = $_POST['phone'];
             $address = $_POST['address'];
-            $role = Role::USER;
+            // $role = Role::USER;
 
-            $registerResult = $this->authService->register($username, $firstName, $lastName, $email, $password, $phone, $address, $role);
+            $registerResult = $this->authService->register($name, $email, $password, $phone, $address);
 
             if ($registerResult['success']) {
                 header("Location: /");
@@ -78,7 +76,7 @@ class UserController
             }
         }
 
-        require_once 'app/views/register.php';
+        require_once '../view/register.php';
     }
 
     public function profile()

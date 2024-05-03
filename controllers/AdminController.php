@@ -2,8 +2,8 @@
 require_once 'model/connection.php';
 require_once 'model/SessionManager.php';
 require_once 'model/User.php';
-require_once 'model/RBAC.pervhp';
-require_once 'app/sices/AuthenticationService.php';
+require_once 'model/RBAC.php';
+require_once 'services/AuthenticationService.php';
 require_once 'model/UserRepository.php';
 require_once 'middlewares/AuthMiddleware.php';
 
@@ -63,7 +63,7 @@ class AdminController
         $user->setEmail($data['email']);
         $user->setPhone($data['phone']);
         $user->setAddress($data['address']);
-        $user->setRole($data['role']);
+        // $user->setRole($data['role']);
 
         $this->userRepository->updateAdmin($user);
         header("Location: /admin");
