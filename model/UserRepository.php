@@ -109,19 +109,17 @@ class UserRepository
 
     public function updateUser(User $user)
     {
-        $sql = "UPDATE users SET 
-        name = :name, 
-        email = :email, 
-        password = :password,
-        phone = :phone, 
-        address = :address
-        WHERE id = :id";
+        $sql = "UPDATE khachhang SET 
+        HoTen = :name, 
+        MatKhau = :password,
+        SoDienThoai = :phone, 
+        Diachi = :address
+        WHERE ID = :id";
 
         $stmt = $this->conn->prepare($sql);
 
         $id = $user->getId();
         $name = $user->getName();
-        $email = $user->getEmail();
         $password = $user->getPassword();
         $phone = $user->getPhone();
         $address = $user->getAddress();
@@ -129,7 +127,6 @@ class UserRepository
 
         $stmt->bindParam(':id', $id, PDO::PARAM_INT);
         $stmt->bindParam(':name', $name, PDO::PARAM_STR);
-        $stmt->bindParam(':email', $email, PDO::PARAM_STR);
         $stmt->bindParam(':password', $password, PDO::PARAM_STR);
         $stmt->bindParam(':phone', $phone, PDO::PARAM_STR);
         $stmt->bindParam(':address', $address, PDO::PARAM_STR);
