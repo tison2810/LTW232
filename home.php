@@ -48,7 +48,7 @@
                 <!-- Account -->
                 <?php if ($authService !== null && $authService->isLoggedIn()): ?>
                     <div class="account">
-                        <a class="button-account" href="#">
+                        <a class="button-account" href="/profile">
                             <?php echo $authService->getLoggedInUser()->getName(); ?>
                         </a>
                     </div>

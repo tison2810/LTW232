@@ -49,7 +49,7 @@
                         </a>
                     </div>
                     <div class="logout">
-                        <a class="button-logout" href="index.php?action=logout">Đăng xuất</a>
+                        <a class="button-logout" href="/logout">Đăng xuất</a>
                     </div>
                 <?php else: ?>
                     <div class="account">
@@ -65,11 +65,6 @@
                         </svg></a>
                 </div>
                 <!-- Menu-content -->
-                <div id="menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
             </div>
         </div>
     </header>

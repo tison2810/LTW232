@@ -13,6 +13,9 @@
   		include_once('navbar.php');
 ?>
 <body>
+	<br/><br/>
+
+	<br/><br/>
 	<div class = "limiter">
 		<div class="container-login100">
 			<!-- <div class="content__left">
