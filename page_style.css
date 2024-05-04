@@ -39,6 +39,32 @@
 .tab-left-header a {
     margin-right: auto;
 }
+.show-car{
+    display: flex;
+}
+.show-car, .show-motorbike{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.button-show-car,.button-show-motorbike{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 150px;
+    padding-right: 150px;;
+    gap: 30px;
+}
+.button-show-car .list-button-show-car {
+    cursor: pointer;
+} 
+.button-show-motorbike .list-button-show-motorbike {
+    cursor: pointer;
+    } 
+  .img-car, .img-motorbike{
+    display: none;
+  }
 .name-car{
     flex: 1; /* Chiếm hết phần còn lại của flex container */
     text-align: center; 

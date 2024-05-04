@@ -15,19 +15,15 @@ CREATE TABLE KhachHang (
 CREATE TABLE Oto (
     ID INT AUTO_INCREMENT,
     Ten VARCHAR(255) NOT NULL,
-    Anh VARCHAR(255),
+    Anh1 VARCHAR(255),
+    Anh2 VARCHAR(255),
+    Anh3 VARCHAR(255),
+    Anh4 VARCHAR(255),
     MoTa TEXT(65535),
     GiaGomPin INT,
-    GiaKhongPin INT,
     Dai INT,
-    Rong INT,
-    Cao INT,
-    DungLuongPin FLOAT,
-    Lazang VARCHAR(255),
-    MucTieuThu INT,
-    SoGhe INT,
-    ThoiGianNap INT,
-    TuiKhi INT,
+    CongSuat VARCHAR(255),
+    QuangDuongDiChuyen INT,
     PRIMARY KEY (ID)
 );
 

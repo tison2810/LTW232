@@ -54,9 +54,9 @@ include_once ('navbar.php');
                             // case 'site_settings':
                             //     require_once 'site_settings.php';
                             //     break;
-                            case 'delete_account':
-                                require_once 'delete_account.php';
-                                break;
+                            // case 'delete_account':
+                            //     require_once 'delete_account.php';
+                            //     break;
                             default: // Show the Current User view by default
                                 require_once 'user_info.php';
                                 break;

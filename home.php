@@ -321,7 +321,7 @@
                 </div>
             </div>
             <div class="detail-car">
-                <a class="button-detail-car" href="VF5.html">XEM CHI TIẾT</a>
+                <a class="button-detail-car" href="/detail">XEM CHI TIẾT</a>
             </div>
         </div>
         <div class="show-motorbike">

@@ -72,7 +72,7 @@ if (isset($_GET['action'])) {
         require_once 'app/views/cart.php';
         exit;
     } elseif ($_GET['action'] == 'detail') {
-        require_once 'app/views/detail.php';
+        require_once 'view/detail.php';
         exit;
     } elseif ($_GET['action'] == 'profile') {
         $userController->profile();
