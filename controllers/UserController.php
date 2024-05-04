@@ -101,9 +101,7 @@ class UserController
             exit;
         }
 
-        $loggedInUser->setFirstName($data['first_name']);
-        $loggedInUser->setLastName($data['last_name']);
-        $loggedInUser->setEmail($data['email']);
+        $loggedInUser->setName($data['name']);
         $loggedInUser->setPhone($data['phone']);
         $loggedInUser->setAddress($data['address']);
 

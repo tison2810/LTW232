@@ -38,35 +38,54 @@ include_once ('navbar.php');
                 <a class="item-select" href="#">Bảo dưỡng sửa chữa</a><br>
                 <a class="item-select" href="#">Thuê pin</a><br>
                 <div class="sidebar-item">TÀI KHOẢN</div>
-                <a class="item-select" href="#">Thông tin cá nhân</a><br>
-                <a class="item-select" href="#">Đổi mật khẩu</a><br>
-                <a class="item-select" href="#">Đăng xuất</a><br>
+                    <a class="item-select" href="/profile">Thông tin cá nhân</a><br>
+                    <a class="item-select" href="/profile/change_info">Chỉnh sửa thông tin</a><br>
+                    <a class="item-select" href="/profile/change_password">Đổi mật khẩu </a><br>
             </div>
-            <div class="maincontent">
-                <div class="component">
-                    <div class="title" style="font-weight: bold;">THÔNG TIN CÁ NHÂN</div>
-                    <div class="component-form">
-                        <div class="username" style="font-weight: bold; font-size: 14px">Họ và tên</div>
-                        <div class="email" style="font-weight: bold; font-size: 14px">Email</div>
-                        <div class="phone" style="font-weight: bold; font-size: 14px">Số điện thoại</div>
-                    </div>
-                    <br></br>
-                    <div class="password" style="font-weight: bold; font-size: 14px">Mật khẩu</div>
-                </div>
-                <div class="data">
-                    <!-- <br></br> -->
-                    <div class="data-form">
-                        <div class="username" style="font-size: 14px"><?= $user->getName(); ?></div>
-                        <div class="email" style="font-size: 14px"><?= $user->getEmail(); ?></div>
-                        <div class="phone" style="font-size: 14px"><?= $user->getPhone(); ?></div>
-                        <br></br>
-                        <a class="password" style="font-size: 14px; text-decoration: none;" href="#">Đổi mật khẩu</a>
-                    </div>
-                </div>
-                <div class="edit">
-                    <a class="edit-profile" href="#">Chỉnh sửa thông tin</a>
-                </div>
-            </div>
+			<?php
+                        $action = $_GET['action'];
+                        switch ($action) {
+                            case 'change_info':
+                                require_once 'change_info.php';
+                                break;
+                            case 'change_password':
+                                require_once 'change_password.php';
+                                break;
+                            // case 'site_settings':
+                            //     require_once 'site_settings.php';
+                            //     break;
+                            case 'delete_account':
+                                require_once 'delete_account.php';
+                                break;
+                            default: // Show the Current User view by default
+                                require_once 'user_info.php';
+                                break;
+                        }
+                        ?>
+				<!-- <div class="maincontent">
+					<div class="component">
+						<div class="title" style="font-weight: bold;">THÔNG TIN CÁ NHÂN</div>
+							<div class="component-form">
+								<div class="username" style="font-weight: bold; font-size: 14px">Họ và tên</div>
+								<div class="email" style="font-weight: bold; font-size: 14px">Email</div>
+								<div class="phone" style="font-weight: bold; font-size: 14px">Số điện thoại</div>
+							</div>
+							<br></br>
+							<div class="password" style="font-weight: bold; font-size: 14px">Mật khẩu</div>
+					</div>
+					<div class="data">
+						<div class="data-form">
+							<div class="username" style="font-size: 14px"><?= $user->getName(); ?></div>
+							<div class="email" style="font-size: 14px"><?= $user->getEmail(); ?></div>
+							<div class="phone" style="font-size: 14px"><?= $user->getPhone(); ?></div>
+							<br></br>
+							<a class="password" style="font-size: 14px; text-decoration: none;" href="#">Đổi mật khẩu</a>
+						</div>
+					</div>
+					<div class="edit">
+						<a class="edit-profile" href="#">Chỉnh sửa thông tin</a>
+					</div>
+            	</div> -->
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
