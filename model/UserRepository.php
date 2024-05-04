@@ -27,7 +27,7 @@ class UserRepository
 
     public function findById($id)
     {
-        $sql = "SELECT * FROM users WHERE id = :id";
+        $sql = "SELECT * FROM khachhang WHERE ID = :id";
         $stmt = $this->conn->prepare($sql);
         $stmt->bindParam(':id', $id, PDO::PARAM_INT);
         $stmt->execute();
