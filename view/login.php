@@ -40,7 +40,7 @@
 					<div class="flex-sb-m w-full p-t-3 p-b-32">
 						<div>
 							Bạn chưa có tài khoản? 
-							<a href="register.php" class="txt1" style="font-size: 18px!important; color: #1464f4;">
+							<a href="/register" class="txt1" style="font-size: 18px!important; color: #1464f4;">
 								Đăng ký ngay nào!
 							</a>
 						</div>

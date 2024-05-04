@@ -48,9 +48,12 @@
                             <?php echo $authService->getLoggedInUser()->getName(); ?>
                         </a>
                     </div>
+                    <div class="logout">
+                        <a class="button-logout" href="index.php?action=logout">Đăng xuất</a>
+                    </div>
                 <?php else: ?>
                     <div class="account">
-                        <a class="button-account" href="view/login.php">TÀI KHOẢN</a>
+                        <a class="button-account" href="/login">TÀI KHOẢN</a>
                     </div>
                 <?php endif; ?>
                 <div class="account-icon">

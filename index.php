@@ -17,6 +17,8 @@ $authService = new AuthenticateService($userRepository, $sessionManager);
 $userController = new UserController($authService, $userRepository, $sessionManager);
 $adminController = new AdminController($userRepository, $authService, $sessionManager, $authMiddleware);
 
+include 'view/navbar.php';
+
 if (isset($_GET['action'])) {
     if ($_GET['action'] == 'logout') {
         $userController->logout();
@@ -101,6 +103,6 @@ if (isset($_GET['action'])) {
     }
 } else {
     // Redirect to the homepage
-    require_once 'indextemp.php';
+    require_once 'home.php';
     exit;
 }

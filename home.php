@@ -54,7 +54,7 @@
                     </div>
                 <?php else: ?>
                     <div class="account">
-                        <a class="button-account" href="view/login.php">TÀI KHOẢN</a>
+                        <a class="button-account" href="/login">TÀI KHOẢN</a>
                     </div>
                 <?php endif; ?>
                 <div class="account-icon">
@@ -67,10 +67,13 @@
                 </div>
                 <!-- Menu-content -->
                 <div id="menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+                <?php if ($authService !== null && $authService->isLoggedIn()): ?>
+                    <div class="logout">
+                        <a class="logout" href="/logout">
+                            Logout
+                        </a>
+                <?php else: ?>
+                <?php endif; ?>
             </div>
         </div>
     </header>
