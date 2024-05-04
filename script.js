@@ -1,16 +1,19 @@
 document.addEventListener('DOMContentLoaded', function() {
     // ********** menu-content **************
-    var menuContent = document.querySelector('.menu-content');
+    var menuContent = document.querySelector('.wrap-menu');
     var menuIcon = document.getElementById('menu');
+    var body = document.querySelector('body')
     // Thêm sự kiện click vào toàn bộ trang để ẩn menu-content khi click bên ngoài menu-content
     document.addEventListener('click', function(event) {
         // Nếu click là menu-icon hoặc menu-content thì hiện menu-content
         if (menuContent.contains(event.target) || menuIcon.contains(event.target)) {
             menuContent.classList.add('active');
+            body.classList.add('hidden_scroll');
         }
         // Nếu click không phải là menu-icon hoặc menu-content thì ẩn menu-content
         else{
             menuContent.classList.remove('active');
+            body.classList.remove('hidden_scroll');
         }
     });
     // **************************************
@@ -167,14 +170,16 @@ document.querySelector('.show-car .prev').addEventListener('click', function(eve
     }
   
 });
+
 function removecar(n) {
     var i;
     for (i = 0; i < car.length; i++) {
       if(i==n)
       {
+        buttonCar[i].style.display="";
         var path = buttonCar[i].querySelectorAll("path");
         path.forEach(function(path) {
-            path.setAttribute("fill", "#3C3C3C"); // Màu xanh
+            path.setAttribute("fill", "#3C3C3C");
         });
           car[i].classList.remove('active');
           infoCar[i].classList.remove('active');
@@ -206,6 +211,7 @@ function showcar(n) {
     }
   }
 }
+
 
 
 
@@ -319,5 +325,51 @@ window.addEventListener("resize", function() {
         y.style.justifyContent="";
         y.style.justifyContent="space-between";
     }
+});
+var car_header=document.getElementsByClassName('car-header')[0];
+var car_details = document.getElementsByClassName('car-dropdown')[0];
+var motorbike_details = document.getElementsByClassName('motorbike-dropdown')[0];
+var motorbike_header=document.getElementsByClassName('motorbike-header')[0];
+document.getElementsByClassName('car-header')[0].addEventListener('click', function() {
+    if (car_header.style.color == '') {
+        car_header.style.color = 'rgb(89, 134, 218)';
+        motorbike_header.style.color = '';
+    } else {
+        car_header.style.color = '';
+    }
+    
+    // Kiểm tra nếu phần tử đã ẩn thì hiển thị nó, ngược lại ẩn đi
+    if (car_details.style.visibility == 'hidden' || car_details.style.visibility == '') {
+        car_details.style.visibility = 'visible';
+        motorbike_details.style.visibility = 'hidden';
+    } else {
+        car_details.style.visibility = 'hidden';
+    }
+});
+
+document.getElementById('car-header').addEventListener('click', function(event) {
+    event.preventDefault();
+});
+
+document.getElementsByClassName('motorbike-header')[0].addEventListener('click', function() {
+    
+    if (motorbike_header.style.color == '') {
+        motorbike_header.style.color = 'rgb(89, 134, 218)';
+        car_header.style.color = '';
+    } else {
+        motorbike_header.style.color = '';
+    }
+    
+    // Kiểm tra nếu phần tử đã ẩn thì hiển thị nó, ngược lại ẩn đi
+    if (motorbike_details.style.visibility == 'hidden' || motorbike_details.style.visibility == '') {
+        motorbike_details.style.visibility = 'visible';
+        car_details.style.visibility = 'hidden';
+    } else {
+        motorbike_details.style.visibility = 'hidden';
+    }
+});
+
+document.getElementById('motorbike-header').addEventListener('click', function(event) {
+    event.preventDefault();
 });
 });

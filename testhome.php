@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>demo</title>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="style1.css">
+    <!-- <script src="script.js"></script> -->
+    <link rel="stylesheet" href="style.css">
     <link id="import_link_font_icon" rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Mulish:300,400,600,700&amp;display=swap&amp;subset=vietnamese">
 </head>
@@ -14,6 +14,61 @@
     include('view/navbar.php');
     ?>
 <body>
+    <!-- <header>
+        <div class="header">
+            <div>
+                <a href="login.php">
+                    <img class="logo-main" alt="VinFast-logo"
+                        src="https://vinfastauto.com/themes/porto/img/new-home-page/VinFast-logo.svg">
+                </a>
+            </div>
+            <div class="header-center">
+                <ul>
+                    <li>
+                        <a href="/introduction" target="_self" class="gioithieu">Giới thiệu</a>
+                    </li>
+                    <li>
+                        <a href="#" class="car-header">Ô tô</a>
+                    </li>
+                    <li>
+                        <a href="#">Xe máy điện</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_self" class="dichvu">Dịch vụ</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="head-right">
+                <?php if ($authService !== null && $authService->isLoggedIn()): ?>
+                    <div class="account">
+                        <a class="button-account" href="/profile">
+                            <?php echo $authService->getLoggedInUser()->getName(); ?>
+                        </a>
+                    </div>
+                <?php else: ?>
+                    <div class="account">
+                        <a class="button-account" href="/login">TÀI KHOẢN</a>
+                    </div>
+                <?php endif; ?>
+                <div class="account-icon">
+                    <a href="#"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M8 8C10.21 8 12 6.21 12 4C12 1.79 10.21 0 8 0C5.79 0 4 1.79 4 4C4 6.21 5.79 8 8 8ZM8 10C5.33 10 0 11.34 0 14V16H16V14C16 11.34 10.67 10 8 10Z"
+                                fill="#7A99AC"></path>
+                        </svg></a>
+                </div>
+                <div id="menu">
+                <?php if ($authService !== null && $authService->isLoggedIn()): ?>
+                    <div class="logout">
+                        <a class="logout" href="/logout">
+                            Logout
+                        </a>
+                <?php else: ?>
+                <?php endif; ?>
+            </div>
+        </div>
+    </header> -->
     <div class="body-main">
         <div class="mySlides fade">
             <img src="https://vinfastauto.com/themes/porto/img/homepage-v2/banner/banner-01.jpg" style="width:100%;">
@@ -321,7 +376,7 @@
                 </div>
             </div>
             <div class="detail-car">
-                <a class="button-detail-car" href="VF5.html">XEM CHI TIẾT</a>
+                <a class="button-detail-car" href="#">XEM CHI TIẾT</a>
             </div>
         </div>
         <div class="show-motorbike">
@@ -630,7 +685,7 @@
                 </div>
             </div>
             <div class="detail-motorbike">
-                <a class="button-detail-motorbike" href="VF5.html">XEM CHI TIẾT</a>
+                <a class="button-detail-motorbike" href="#">XEM CHI TIẾT</a>
             </div>
         </div>
         <div class="receive-info">
@@ -699,7 +754,7 @@
                     <div class="email">
                         <a href="mailto:support.vn@vinfastauto.com">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                xmlns="http://www.w3.org/2000/svg" style="margin-right: 10px;">
+                                xmlns="http://www.w3.org/2000/svg"  style="margin-right: 10px;">
                                 <path
                                     d="M16.668 6.66683L10.0013 10.8335L3.33464 6.66683V5.00016L10.0013 9.16683L16.668 5.00016V6.66683ZM16.668 3.3335H3.33464C2.40964 3.3335 1.66797 4.07516 1.66797 5.00016V15.0002C1.66797 15.4422 1.84356 15.8661 2.15612 16.1787C2.46868 16.4912 2.89261 16.6668 3.33464 16.6668H16.668C17.11 16.6668 17.5339 16.4912 17.8465 16.1787C18.159 15.8661 18.3346 15.4422 18.3346 15.0002V5.00016C18.3346 4.55814 18.159 4.13421 17.8465 3.82165C17.5339 3.50909 17.11 3.3335 16.668 3.3335Z"
                                     fill="#8A8A8A"></path>
@@ -747,81 +802,40 @@
     </div>
     <div class="body-content body-gioi-thieu">
         <div>
-
+        
         </div>
 
     </div>
     <div class="body-oto"></div>
     <div class="body-xemaydien"></div>
     <div class="body-content body-dich-vu"></div>
-    <div class="wrap-menu">
-        <div class="menu-content">
-            <div class="box-icon-x">
-                <a href="" class="icon-x"><svg width="36" height="36" viewBox="0 0 36 36" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path d="M19 6L6 19M6 6L19 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                    </svg></a>
-            </div>
-            <div class="menu-content-m">
-                <!-- Return Giới thiệu page -->
-                <div class="div-hover">
-                    <a href="#" target="_self" class="gioithieu">Giới thiệu</a>
-                </div>
+    <div class="menu-content">
+        <div class="box-icon-x">
+            <a href="" class="icon-x"><svg width="36" height="36" viewBox="0 0 36 36" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 6L6 19M6 6L19 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg></a>
+        </div>
+        <div class="menu-content-m">
 
-                <div class="wrap-sub-item">
-                    Ô tô
-                </div>
-
-                <div class="div-hover">
-                    <a href="VF5.html" class="sub-item">VF 5</a>
-                </div>
-                <div class="div-hover">
-                    <a href="VF5.html" class="sub-item">VF 6</a>
-                </div>
-                <div class="div-hover">
-                    <a href="VF5.html" class="sub-item">VF e34</a>
-                </div>
-                <div class="div-hover">
-                    <a href="VF5.html" class="sub-item">VF 7</a>
-                </div>
-                <div class="div-hover">
-                    <a href="VF5.html" class="sub-item">VF 8</a>
-                </div>
-                <div class="div-hover">
-                    <a href="VF5.html" class="sub-item">VF 9</a>
-                </div>
-                <div class="wrap-sub-item">
-                    Xe máy điện
-                </div>
-                <div class="div-hover">
-                    <a href="VF5.html" class="sub-item">Evo200 Lite</a>
-                </div>
-                <div class="div-hover">
-                    <a href="VF5.html" class="sub-item">Evo200</a>
-                </div>
-                <div class="div-hover">
-                    <a href="VF5.html" class="sub-item">FelizS</a>
-                </div>
-                <div class="div-hover">
-                    <a href="VF5.html" class="sub-item">KlaraS</a>
-                </div>
-                <div class="div-hover">
-                    <a href="VF5.html" class="sub-item">VenoS</a>
-                </div>
-                <div class="div-hover">
-                    <a href="VF5.html" class="sub-item">TheonS</a>
-                </div>
-    
-                <!-- Return Dịch vụ page -->
-                <div class="div-hover">
-                    <a href="#" target="_self" class="dichvu">Dịch vụ</a>
-                </div>
-                
+            <!-- Return Giới thiệu page -->
+            <div>
+                <a href="#" target="_self" class="gioithieu">Giới thiệu</a>
             </div>
+            <div>
+                <a href="#">Ô tô</a>
+            </div>
+            <div>
+                <a href="#">Xe máy điện</a>
+            </div>
+            <!-- Return Dịch vụ page -->
+            <div>
+                <a href="#" target="_self" class="dichvu">Dịch vụ</a>
+            </div>
+
         </div>
     </div>
-
     <div class="car-header-content">
         <div class="car-header-content-head">
 

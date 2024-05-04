@@ -1,0 +1,239 @@
+.page-wrap {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding-left: 30px;
+    background-color: #f7f9f9;
+    box-sizing: border-box;
+}
+
+.tab-left {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 70%;
+    left: 0;
+}
+
+.tab-right {
+    display: flex;
+    flex-direction: column;
+    right: 0;
+    width: 30%;
+    background-color: #ffffff;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 30px    ;
+    right: 0;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.tab-left-header {
+    top: 0;
+    padding-top: 50px;
+    padding-bottom: 70px;
+    display: flex;
+    justify-content: center;
+}
+.tab-left-header a {
+    margin-right: auto;
+}
+.name-car{
+    flex: 1; /* Chiếm hết phần còn lại của flex container */
+    text-align: center; 
+    margin-right: 100px;
+}
+.button-in,
+.button-out {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 24px;
+    width: 171px;
+
+    background: #fff;
+    border-radius: 3px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: #1464f4;
+    height: auto;
+    box-sizing: border-box;
+    border: 1px solid #2c72c6;
+    margin-right: 1em;
+    text-decoration: none;
+}
+
+.button-out.active,
+.button-in.active {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 24px;
+    width: 171px;
+
+    background: #1464f4;
+    border-radius: 3px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: #fff;
+    height: auto;
+    box-sizing: border-box;
+    border: 1px solid #2c72c6;
+    margin-right: 1em;
+    text-decoration: none;
+}
+
+.button-in:hover,
+.button-out:hover,
+.button-checkout:hover {
+    background: #1464f4;
+
+    color: #fff !important;
+    border-color: #1464f4;
+}
+
+body {
+    font-family: 'Mulish', sans-serif;
+    letter-spacing: -.02rem;
+    color: #1a1a1a;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.in-out {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+
+.item {
+    display: flex;
+    justify-content: center;
+}
+
+.info {
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.info-detail {
+    display: flex;
+    padding-left: 30px;
+    padding-right: 30px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+#wrap-out {
+    display: flex;
+    flex-direction: column;
+  
+    padding-top: 30px;
+}
+
+#wrap-in {
+    display: none;
+}
+
+.img-in {
+    display: flex;
+    justify-content: center;
+}
+
+.tab-right-name {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.info-own input {
+    width: 80%;
+    height: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.info-showroom select {
+    width: 100%;
+    height: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.info-payment select {
+    width: 100%;
+    height: 30px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+body {
+    overflow: hidden;
+}
+
+.money {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.button-checkout {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 171px;
+width: 100%;
+    background: #fff;
+    border-radius: 3px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: #1464f4;
+    height: auto;
+    box-sizing: border-box;
+    border: 1px solid #2c72c6;
+    text-decoration: none;
+}
+.button-color.active img{
+    border: 3px solid rgb(112, 183, 255);
+}
+.button-color{
+    margin-right: 10px;
+}
+.item-color{
+    display: none;
+}
+.item-color.active{
+display: flex;
+justify-content: center;
+}
+.wrap-button-color{
+    display: flex;
+
+}
