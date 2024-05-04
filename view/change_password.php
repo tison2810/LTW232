@@ -43,12 +43,13 @@
                 <input class="form-control mt-3" type="password" name="current_password" id="current_password" placeholder="Mật khẩu hiện tại">
                 <input class="form-control mt-3" type="password" name="new_password" id="new_password" placeholder="Mật khẩu mới">
                 <input class="form-control mt-3" type="password" name="confirm_password" id="confirm_password" placeholder="Xác nhận mật khẩu mới">
-
-                <div class="container-login100-form-btn">
-                    <button class="form btn btn-outline-primary mt-3" type="submit" name="profile/change_password_handler/" style="font-size: 20px; font-weight: bold;">
-                        ĐỔI MẬT KHẨU
-                    </button>
-                </div>
+    </div>
+    <div class="submit-button">
+        <div class="container-login100-form-btn" style="margin-left: 100px;">
+            <button class="form btn btn-outline-primary mt-3" type="submit" name="update_profile" style="font-size: 20px; font-weight: bold;">
+                    Cập nhật thay đổi
+            </button>
+        </div>
         </form>
     </div>
 </div>
