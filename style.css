@@ -658,7 +658,7 @@ body {
   grid-area: 1/ 2/ 9/ 3;
   border-radius: 3px;
   display: grid;
-  grid-template-columns: 300px 530px 180px;
+  grid-template-columns: 330px 500px 180px;
 }
 .component{
   /* background-color: aqua; */
@@ -681,6 +681,17 @@ body {
 }
 .edit-profile{
   text-decoration: none;
+}
+.change-info{
+  background-color: rgb(255, 255, 255);
+  grid-area: 1/ 2/ 9/ 3;
+  border-radius: 3px;
+  display: grid;
+  grid-template-columns: 330px 340px 330px;
+}
+.change-info-form{
+  margin-top: 50px;
+  grid-area: 1/2/9/3;
 }
 .sidebar-item{
   /* margin-left: 10px; */
