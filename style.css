@@ -142,8 +142,9 @@ body {
     flex-direction: row;
     margin-right: 20px;
 }
-.menu-content.active {
+.wrap-menu.active {
     display: flex;
+    justify-content: end;
   }
   .body-gioi-thieu.actives{
     display: flex;
@@ -157,20 +158,29 @@ body {
   .body-dich-vu{
     display: none;
   }
-.menu-content {
+  .wrap-menu{
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+.menu-content {
+    position: relative;
+    z-index: 3;
     flex-direction: column;
     min-height: 100%;
-    height: fit-content;
+    /* height: fit-content; */
     width: 17.9166666667%;
-    min-width: 344px;
+    min-width: 244px; 
     top: 0;
-    right: 0;
     color: #3c3c3c;
     background-color: rgb(241, 241, 241);
-    padding: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    overflow-y: auto;
 }
 .icon-x{
     margin-top: 19px;
@@ -186,18 +196,29 @@ body {
     bottom: 0;
     left: 0;
     display: block;
-    box-sizing: border-box;
+    box-sizing: border-box; 
+    overflow-y: auto;
 }
 .menu-content-m div {
-    padding-top: 25px; /* Màu chữ khi di chuột vào */
-    padding-bottom: 25px; 
+    padding-top: 15px; 
+    padding-bottom: 15px; 
     border-radius: 5px;
 }
-.menu-content-m div:hover {
+.menu-content-m .div-hover:hover {
     background-color: rgba(117, 162, 246, 0.3);
 }
-.menu-content-m a {
+.wrap-sub-item {
+  margin-left: 20px;
+  font-size: 17px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+.menu-content-m a{
     margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 0;
     font-size: 17px;
     text-decoration: none;
     font-weight: 600;
@@ -295,6 +316,7 @@ body {
   }
   html,body {
     height: 100%;
+    width: 100%;
 }
 .show-car, .show-motorbike{
   display: flex;
@@ -529,4 +551,47 @@ body {
   flex-direction: column;
   margin-top: 20px;
   margin-bottom: 20px;
+}
+.car-dropdown, .motorbike-dropdown{
+position: fixed;
+visibility: hidden;
+display: flex;
+z-index: 1;
+top: 75px;
+padding-top: 30px;
+padding-bottom: 30px;
+padding-left: 20px;
+padding-right: 20px;
+background-color: #fff;
+box-shadow: 0 3px 6px #00000029;
+}
+.car-dropdown-detail , .motorbike-dropdown-detail{
+display: flex;
+width: 16,66667%;
+justify-content: center;
+align-items: center;
+}
+/* .car-dropdown-detail a{
+  text-decoration: none;
+} */
+.car-dropdown-detail-a, .motorbike-dropdown-detail-a{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%; 
+  text-decoration: none;
+  color: #1a1a1a;
+  font-weight: 600;
+  border-radius: 7px;
+}
+.car-dropdown-detail-a:hover, .motorbike-dropdown-detail-a:hover{
+  background-color: #afc6f16c;
+}
+.sub-item{
+  margin-left: 50px !important;
+  font-size: 17px !important;
+    font-weight: 400 !important;
+}
+body.hidden_scroll {
+  overflow: hidden; /* Vô hiệu hóa cuộn trang chính khi menu mở ra */
 }
