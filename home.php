@@ -14,20 +14,16 @@
     include('view/navbar.php');
     ?>
 <body>
-    <header>
+    <!-- <header>
         <div class="header">
-            <!-- icon -->
             <div>
-                <!-- return main page -->
                 <a href="login.php">
                     <img class="logo-main" alt="VinFast-logo"
                         src="https://vinfastauto.com/themes/porto/img/new-home-page/VinFast-logo.svg">
                 </a>
             </div>
-            <!-- head-center -->
             <div class="header-center">
                 <ul>
-                    <!-- Return Giới thiệu page -->
                     <li>
                         <a href="/introduction" target="_self" class="gioithieu">Giới thiệu</a>
                     </li>
@@ -37,15 +33,12 @@
                     <li>
                         <a href="#">Xe máy điện</a>
                     </li>
-                    <!-- Return Dịch vụ page -->
                     <li>
                         <a href="#" target="_self" class="dichvu">Dịch vụ</a>
                     </li>
                 </ul>
             </div>
-            <!-- head-right -->
             <div class="head-right">
-                <!-- Account -->
                 <?php if ($authService !== null && $authService->isLoggedIn()): ?>
                     <div class="account">
                         <a class="button-account" href="/profile">
@@ -65,7 +58,6 @@
                                 fill="#7A99AC"></path>
                         </svg></a>
                 </div>
-                <!-- Menu-content -->
                 <div id="menu">
                 <?php if ($authService !== null && $authService->isLoggedIn()): ?>
                     <div class="logout">
@@ -76,7 +68,7 @@
                 <?php endif; ?>
             </div>
         </div>
-    </header>
+    </header> -->
     <div class="body-main">
         <div class="mySlides fade">
             <img src="https://vinfastauto.com/themes/porto/img/homepage-v2/banner/banner-01.jpg" style="width:100%;">
