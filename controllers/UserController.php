@@ -90,7 +90,7 @@ class UserController
         $userRepository = $this->userRepository;
         $authService = $this->authService;
         $user = $loggedInUser;
-        require_once 'app/views/profile.php';
+        require_once 'view/profile.php';
     }
 
     public function updateProfile($data)

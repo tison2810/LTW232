@@ -19,6 +19,9 @@
   		include_once('navbar.php');
 ?>
 <body>
+    <br/><br/>
+
+    <br/><br/>
 	<div class = "limiter">
 		<div class="container-login100">
 			<div class="container mt-3" style=" width: 400px">
