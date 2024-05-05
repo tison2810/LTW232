@@ -74,6 +74,24 @@ if (isset($_GET['action'])) {
     } elseif ($_GET['action'] == 'detail') {
         require_once 'view/detail.php';
         exit;
+    } elseif ($_GET['action'] == 'vf5') {
+        require_once 'view/detail.php';
+        exit;
+    } elseif ($_GET['action'] == 'vf6') {
+        require_once 'view/detail.php';
+        exit;
+    } elseif ($_GET['action'] == 'vf7') {
+        require_once 'view/detail.php';
+        exit;
+    } elseif ($_GET['action'] == 'vf8') {
+        require_once 'view/detail.php';
+        exit;
+    } elseif ($_GET['action'] == 'vf9') {
+        require_once 'view/detail.php';
+        exit;
+    } elseif ($_GET['action'] == 'vfe34') {
+        require_once 'view/detail.php';
+        exit;
     } elseif ($_GET['action'] == 'profile') {
         $userController->profile();
         exit;

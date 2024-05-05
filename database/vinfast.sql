@@ -9,6 +9,7 @@ CREATE TABLE KhachHang (
     HoTen VARCHAR(255) NOT NULL,
     Email VARCHAR(255) UNIQUE NOT NULL,
     Diachi VARCHAR(1000),
+    Role enum('USER','ADMIN') NOT NULL DEFAULT 'USER',
     PRIMARY KEY (ID)
 );
 
@@ -101,6 +102,5 @@ CREATE TABLE NhanVien (
     MatKhau VARCHAR(20) NOT NULL,
     HoTen VARCHAR(255) NOT NULL,
     SoDienThoai CHAR(10) NOT NULL,
-    GioiTinh CHAR(1),
     PRIMARY KEY (ID)
 );

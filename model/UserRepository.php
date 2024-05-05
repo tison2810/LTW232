@@ -13,7 +13,7 @@ class UserRepository
 
     public function findAll()
     {
-        $sql = "SELECT * FROM users";
+        $sql = "SELECT * FROM khachhang";
         $stmt = $this->conn->prepare($sql);
         $stmt->execute();
         $usersData = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -68,6 +68,25 @@ class UserRepository
         return null;
     }
 
+    public function findByEmailAdmin($email)
+    {
+        $sql = "SELECT * FROM nhanvien WHERE Email = :email";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bindParam(':email', $email, PDO::PARAM_STR);
+        $stmt->execute();
+        $userData = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        if ($userData) {
+            // if ($userData) {
+            //     print_r($userData);
+                // Or if you want formatted output:
+                // echo '<pre>', print_r($userData, true), '</pre>';
+            // }
+            return $this->createUserFromData($userData);
+        }
+        return null;
+    }
+
     private function createUserFromData($data)
     {
         return new User(
@@ -76,19 +95,20 @@ class UserRepository
             $data['Email'],
             $data['MatKhau'],
             $data['SoDienThoai'],
-            $data['Diachi']
+            $data['Diachi'],
+            $data['Role']
         );
     }
 
     public function updateAdmin(User $user)
     {
-        $sql = "UPDATE users SET 
-            name = :name, 
-            email = :email, 
-            phone = :phone, 
-            address = :address, 
-            -- role = :role 
-            WHERE id = :id";
+        $sql = "UPDATE khachhang SET 
+            HoTen = :name, 
+            Email = :email, 
+            SoDienThoai = :phone, 
+            Diachi = :address, 
+            role = :role 
+            WHERE ID = :id";
         $stmt = $this->conn->prepare($sql);
 
         $id = $user->getId();
@@ -96,14 +116,14 @@ class UserRepository
         $email = $user->getEmail();
         $phone = $user->getPhone();
         $address = $user->getAddress();
-        // $role = $user->getRole();
+        $role = $user->getRole();
 
         $stmt->bindParam(':id', $id, PDO::PARAM_INT);
         $stmt->bindParam(':name', $name, PDO::PARAM_STR);
         $stmt->bindParam(':email', $email, PDO::PARAM_STR);
         $stmt->bindParam(':phone', $phone, PDO::PARAM_STR);
         $stmt->bindParam(':address', $address, PDO::PARAM_STR);
-        // $stmt->bindParam(':role', $role, PDO::PARAM_STR);
+        $stmt->bindParam(':role', $role, PDO::PARAM_STR);
         $stmt->execute();
     }
 
@@ -135,7 +155,7 @@ class UserRepository
 
     public function deleteUser(User $user)
     {
-        $sql = "DELETE FROM users WHERE id = :id";
+        $sql = "DELETE FROM khachhang WHERE ID = :id";
         $stmt = $this->conn->prepare($sql);
         $stmt->bindParam(':id', $user->getId(), PDO::PARAM_INT);
         $stmt->execute();

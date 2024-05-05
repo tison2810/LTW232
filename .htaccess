@@ -15,12 +15,12 @@ RewriteRule ^admin/delete/([0-9]+)/?$ index.php?action=delete_user&id=$1
 #Rewrite URLs for site routing
 RewriteRule ^introduction/?$ index.php?action=introduction
 RewriteRule ^detail/?$ index.php?action=detail
-RewriteRule ^detail/VF5/?$ index.php?action=VF5
-RewriteRule ^detail/VF6/?$ index.php?action=VF6
-RewriteRule ^detail/VF7/?$ index.php?action=VF7
-RewriteRule ^detail/VF8/?$ index.php?action=VF8
-RewriteRule ^detail/VF9/?$ index.php?action=VF9
-RewriteRule ^detail/VFe34/?$ index.php?action=VFe34
+RewriteRule ^detail/vf5/?$ index.php?action=vf5
+RewriteRule ^detail/vf6/?$ index.php?action=vf6
+RewriteRule ^detail/vf7/?$ index.php?action=vf7
+RewriteRule ^detail/vf8/?$ index.php?action=vf8
+RewriteRule ^detail/vf9/?$ index.php?action=vf9
+RewriteRule ^detail/vfe34/?$ index.php?action=vfe34
 RewriteRule ^news/?$ index.php?action=news
 RewriteRule ^payment/?$ index.php?action=payment
 RewriteRule ^contact/?$ index.php?action=contact
@@ -36,6 +36,13 @@ RewriteRule ^profile/change_password/?$ index.php?action=change_password
 RewriteRule ^profile/site_settings/?$ index.php?action=site_settings
 RewriteRule ^profile/change_password_handler/?$ index.php?action=change_password_handler
 RewriteRule ^profile/delete_account/?$ index.php?action=delete_account
+
+
+RewriteRule ^profile/view_user?$ index.php?action=view_user
+RewriteRule ^profile/edit_user/([0-9]+)/?$ index.php?action=edit_user&id=$1
+RewriteRule ^profile/update_user/([0-9]+)/?$ index.php?action=update_user&id=$1
+RewriteRule ^profile/delete_user/([0-9]+)/?$ index.php?action=delete_user&id=$1
+# RewriteRule ^profile/edit_user?$ index.php?action=edit_user&id=1
 
 RewriteRule ^/?$ index.php
 

@@ -22,6 +22,16 @@ class AuthenticateService {
 
         return false;
     }
+    public function loginAdmin($email, $password){
+        $user = $this->userRepository->findByEmailAdmin($email);
+
+        if ($user && password_verify($password, $user->getPassword())) {
+            $this->sessionManager->set('user', $user);
+            return true;
+        }
+
+        return false;
+    }
 
 
     /**

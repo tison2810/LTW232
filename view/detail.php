@@ -6,25 +6,14 @@
     <title>demo</title>
     <script src="../page_script.js"></script>
     <link rel="stylesheet" href="../page_style.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link id="import_link_font_icon" rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Mulish:300,400,600,700&amp;display=swap&amp;subset=vietnamese">
 </head>
 
 <body>
-<script>
-$(document).ready(function(){
-  $(".list-button-show-car").click(function(){
-    // Extract car name from class name
-    var className = $(this).attr('class');
-    var carNamE = className.split(' ')[0];
-    localStorage.setItem("carName", carName);
-    window.location.href = "detail.php?carName=" + carName;
-    console.log("carNamE before AJAX request: " + carNamE);
-    // Send car name to server
-  });
-});
-</script>
     <div class="page-wrap">
         <div class="tab-left">
             <div class="tab-left-header">
@@ -65,7 +54,7 @@ $(document).ready(function(){
                 </div> -->
                 <div class="show-car">
                 <div class="button-show-car">
-                    <a class="VF5 list-button-show-car" href="/detail/VF5">
+                    <a class="VF5 list-button-show-car" href="/detail/vf5">
                         <svg width="128" height="24" viewBox="0 0 128 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_9060_7885)">
                                 <path
@@ -96,7 +85,7 @@ $(document).ready(function(){
                             </defs>
                         </svg>
                     </a>
-                    <a class="VF6 list-button-show-car" href="/detail/VF6">
+                    <a class="VF6 list-button-show-car" href="/detail/vf6">
                         <svg width="92" height="31" viewBox="0 0 92 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_8158_6100)">
                                 <path
@@ -116,7 +105,7 @@ $(document).ready(function(){
                             </defs>
                         </svg>
                     </a>
-                    <a class="VFe34 list-button-show-car" href="/detail/VFe34">
+                    <a class="VFe34 list-button-show-car" href="/detail/vfe34">
                         <svg width="123" height="31" viewBox="0 0 123 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_7952_5899)">
                             </g>
@@ -144,7 +133,7 @@ $(document).ready(function(){
                             </defs>
                         </svg>
                     </a>
-                    <a class="VF7 list-button-show-car" href="/detail/VF7">
+                    <a class="VF7 list-button-show-car" href="/detail/vf7">
                         <svg width="92" height="24" viewBox="0 0 92 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_8834_7504)">
                                 <path
@@ -164,7 +153,7 @@ $(document).ready(function(){
                             </defs>
                         </svg>
                     </a>
-                    <a class="VF8 list-button-show-car" href="/detail/VF8">
+                    <a class="VF8 list-button-show-car" href="/detail/vf8">
                         <svg width="92" height="31" viewBox="0 0 92 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_7952_5908)">
                             </g>
@@ -189,7 +178,7 @@ $(document).ready(function(){
                             </defs>
                         </svg>
                     </a>
-                    <a class="VF9 list-button-show-car" href="/detail/VF9">
+                    <a class="VF9 list-button-show-car" href="/detail/vf9">
                         <svg width="92" height="31" viewBox="0 0 92 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_7952_5911)">
                             </g>
@@ -225,66 +214,31 @@ $(document).ready(function(){
                 <div class="in">
                     <a id="in" class="button-in" href="#">NỘI THẤT</a>
                 </div>
-
             </div>
             <div id="wrap-out">
             <?php
-            // Check if carNamE is set in POST
-                // $carName = $_SESSION['carName'];
-                $carName = $_GET['carName'];
-                // Prepare and bind
-                $conn = mysqli_connect("localhost","root","","vinfast");
-                $stmt = $conn->prepare("SELECT * FROM oto WHERE Ten = ?");
-                $stmt->bind_param("s", $carName);
-
-                // Execute the statement
-                $stmt->execute();
-
-                // Get the result
-                $result = $stmt->get_result();
-
-                // Fetch the data
-                if ($result->num_rows > 0) {
-                    // Fetch the row
-                    $row = $result->fetch_assoc();
-                } else {
-                    echo "0 results";
-                }
-            ?>
-                <div class="item-color active">
-                    <img style="width: 70%;"
-                        src="<?php echo $row['Anh1']; ?>"
-                        alt="VF 5">
-                </div>
-                <div class="item-color">
-                    <img style="width: 70%;"
-                        src="https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dwb79912db/images/VF5/GA12V/CE18.png"
-                        alt="VF 5">
-                </div>
-                <div class="item-color">
-                    <img style="width: 70%;"
-                        src="https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dw31159cd7/images/VF5/GA12V/CE1M.png"
-                        alt="VF 5">
-                </div>
-                <div class="item-color">
-                    <img style="width: 70%;"
-                        src="https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dw7f1def14/images/VF5/GA12V/CE1N.webp"
-                        alt="VF 5">
-                </div>
-                <div class="info">
-                    <div class="info-detail">
-                        <p>Công suất tối đa</p>
-                        <p>134 hp/100 kW</p>
-                    </div>
-                    <div class="info-detail">
-                        <p>Quãng đường di chuyển 1 lần sạc đầy lên tới</p>
-                        <p>326,4 km (NEDC)</p>
-                    </div>
-                    <div class="info-detail">
-                        <p>Chiều dài cơ sở</p>
-                        <p>2.514 mm</p>
-                    </div>
-                </div>
+                        $action = $_GET['action'];
+                        switch ($action) {
+                            case 'vf6':
+                                require_once 'vf6.php';
+                                break;
+                            case 'vf7':
+                                require_once 'vf7.php';
+                                break;
+                            case 'vf8':
+                                require_once 'vf8.php';
+                                break;
+                            case 'vf9':
+                                require_once 'vf9.php';
+                                break;
+                            case 'vfe34':
+                                require_once 'vfe34.php';
+                                break;
+                            default: // Show the Current User view by default
+                                require_once 'vf5.php';
+                                break;
+                        }
+                        ?>
             </div>
             <div id="wrap-in">
                 <div class="img-in">
@@ -296,6 +250,7 @@ $(document).ready(function(){
 
         </div>
         <div class="tab-right">
+            <br></br>
             <div class="tab-right-name">
                 <p>Ngoại thất</p>
             </div>
@@ -303,25 +258,25 @@ $(document).ready(function(){
                 <div class="button-color button-color-1 active" >
                     <a href="#">
                         <img src="https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/vi_VN/dwd33a1938/raisinghands/color/exterior/CE14.jpg"
-                            alt="Ô tô điện VinFast VF5 màu Neptune Grey">
+                            alt="Ô tô điện VinFast màu Neptune Grey">
                     </a>
                 </div>
                 <div class="button-color  button-color-2">
                     <a href="#">
                         <img src="https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/vi_VN/dw94503081/raisinghands/color/exterior/CE18.jpg"
-                            alt="Ô tô điện VinFast VF5 màu Brahminy White">
+                            alt="Ô tô điện VinFast màu Brahminy White">
                     </a>
                 </div>
                 <div class="button-color button-color-3" >
                     <a href="#">
                         <img src="https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dwbd06aff1/raisinghands/color/exterior/CE1M.jpg"
-                            alt="Ô tô điện VinFast VF5 màu Crimson Red">
+                            alt="Ô tô điện VinFast màu Crimson Red">
                     </a>
                 </div>
                 <div class="button-color button-color-4">
                     <a href="#">
                         <img src="https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dw086fd02d/raisinghands/color/exterior/CE1N.jpg"
-                            alt="Ô tô điện VinFast VF5 màu VinFast Blue">
+                            alt="Ô tô điện VinFast màu VinFast Blue">
                     </a>
                 </div>
 
@@ -335,34 +290,11 @@ $(document).ready(function(){
                         alt=""></a>
             </div>
             <div class="tab-right-name">
-                <p>Thông tin chủ xe</p>
-            </div>
-            <div class="info-own">
-                <label for="name">Họ và tên:</label>
-                <br>
-                <input type="text" id="name" name="name">
-            </div>
-            <div class="info-own">
-                <label for="name">Số điện thoại:</label>
-                <br>
-                <input type="text" id="name" name="name">
-            </div>
-            <div class="info-own">
-                <label for="name">Số CMND:</label>
-                <br>
-                <input type="text" id="name" name="name">
-            </div>
-            <div class="info-own">
-                <label for="name">Email:</label>
-                <br>
-                <input type="text" id="name" name="name">
-            </div>
-            <div class="tab-right-name">
                 <p>Showroom nhận xe</p>
             </div>
             <div class="info-showroom">
-                <label for="showroom">Choose a showroom:</label>
-                <select id="showroom" name="showroom">
+                <label for="showroom"></label>
+                <select class="showroom-option" id="showroom" name="showroom">
                     <option value="showroom1">Showroom 1</option>
                     <option value="showroom2">Showroom 2</option>
                     <option value="showroom3">Showroom 3</option>
@@ -372,7 +304,7 @@ $(document).ready(function(){
                 <p>Hình thức thanh toán</p>
             </div>
             <div class="info-payment">
-                <label for="payment">Choose 1 payment method:</label>
+                <label for="payment"></label>
                 <select id="payment" name="payment">
                     <option value="Visa">Thẻ thanh toán quốc tế</option>
                     <option value="ATM">Thẻ ATM nội địa</option>
