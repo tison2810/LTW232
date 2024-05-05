@@ -15,6 +15,12 @@ RewriteRule ^admin/delete/([0-9]+)/?$ index.php?action=delete_user&id=$1
 #Rewrite URLs for site routing
 RewriteRule ^introduction/?$ index.php?action=introduction
 RewriteRule ^detail/?$ index.php?action=detail
+RewriteRule ^detail/VF5/?$ index.php?action=VF5
+RewriteRule ^detail/VF6/?$ index.php?action=VF6
+RewriteRule ^detail/VF7/?$ index.php?action=VF7
+RewriteRule ^detail/VF8/?$ index.php?action=VF8
+RewriteRule ^detail/VF9/?$ index.php?action=VF9
+RewriteRule ^detail/VFe34/?$ index.php?action=VFe34
 RewriteRule ^news/?$ index.php?action=news
 RewriteRule ^payment/?$ index.php?action=payment
 RewriteRule ^contact/?$ index.php?action=contact
