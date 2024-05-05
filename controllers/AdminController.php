@@ -39,7 +39,7 @@ class AdminController
         $userRepository = $this->userRepository;
         $authService = $this->authService;
         $users = $this->userRepository->findAll();
-        require_once 'app/views/view_user.php';
+        require_once 'view/profile.php';
     }
 
     public function editUser($id)
@@ -49,7 +49,7 @@ class AdminController
         $userRepository = $this->userRepository;
         $authService = $this->authService;
         $user = $this->userRepository->findById($id);
-        require_once "app/views/edit_user.php";
+        require_once "view/profile.php";
     }
 
 
@@ -63,10 +63,10 @@ class AdminController
         $user->setEmail($data['email']);
         $user->setPhone($data['phone']);
         $user->setAddress($data['address']);
-        // $user->setRole($data['role']);
+        $user->setRole($data['role']);
 
         $this->userRepository->updateAdmin($user);
-        header("Location: /admin");
+        header("Location: /profile/view_user");
         exit;
     }
 
@@ -76,11 +76,11 @@ class AdminController
 
         $user = $this->userRepository->findById($id);
         $this->userRepository->deleteUser($user);
-        header("Location: /admin");
+        header("Location: /profile/view_user");
         exit;
     }
 
 }
 
 
-?>s
+?>

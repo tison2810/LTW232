@@ -40,6 +40,27 @@ class UserController
         require_once 'view/login.php';
     }
 
+    public function loginAdmin()
+    {
+        if ($this->authService->isLoggedIn()) {
+            header("Location: /");
+            exit;
+        }
+
+        if (isset($_POST['loginAdmin'])) {
+            $email = $_POST['email'];
+            $password = $_POST['password'];
+
+            if ($this->authService->loginAdmin($email, $password)) {
+                header("Location: /");
+                exit;
+            } else {
+                $errorMessage = 'Incorrect email or password';
+            }
+        }
+        require_once 'view/login.php';
+    }
+
     public function logout()
     {
         if (isset($_GET['action']) && $_GET['action'] == 'logout') {
@@ -104,6 +125,8 @@ class UserController
         $loggedInUser->setName($data['name']);
         $loggedInUser->setPhone($data['phone']);
         $loggedInUser->setAddress($data['address']);
+        $loggedInUser->setEmail($data['email']);
+        $loggedInUser->setRole($data['role']);
 
         $this->userRepository->updateUser($loggedInUser);
         header('Location: /profile');

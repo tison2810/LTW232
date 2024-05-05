@@ -8,18 +8,18 @@ class User {
     private $password;
     private $phone;
     private $address;
-    // private $role;
+    private $role;
     // private $createdAt;
     // private $updatedAt;
 
-    public function __construct($id, $name, $email, $password, $phone, $address) {
+    public function __construct($id, $name, $email, $password, $phone, $address, $role) {
         $this->id = $id;
         $this->setName($name);
         $this->setEmail($email);
         $this->setPassword($password);
         $this->setPhone($phone);
         $this->setAddress($address);
-        // $this->setRole($role);
+        $this->setRole($role);
         // $this->createdAt = $createdAt;
         // $this->updatedAt = $updatedAt;
     }
@@ -30,6 +30,9 @@ class User {
 
     public function getName() {
         return $this->name;
+    }
+    public function getRole() {
+        return $this->role;
     }
 
     public function getEmail() {
@@ -60,12 +63,12 @@ class User {
     //     return $this->updatedAt;
     // }
 
-    // public function setRole($role) {
-    //     if (!Role::isValidRole($role)) {
-    //         throw new InvalidArgumentException("Invalid role provided");
-    //     }
-    //     $this->role = $role;
-    // }
+    public function setRole($role) {
+        if (!Role::isValidRole($role)) {
+            throw new InvalidArgumentException("Invalid role provided");
+        }
+        $this->role = $role;
+    }
 
     public function toString() {
         $output = "";
@@ -74,7 +77,7 @@ class User {
         $output .= "Email: " . $this->email . "\n";
         $output .= "Phone: " . $this->phone . "\n";
         $output .= "Address: " . $this->address . "\n";
-        // $output .= "Role: " . $this->role . "\n";
+        $output .= "Role: " . $this->role . "\n";
         // $output .= "Created At: " . $this->createdAt . "\n";
         // $output .= "Updated At: " . $this->updatedAt . "\n";
         return $output;
