@@ -65,7 +65,7 @@ $(document).ready(function(){
                 </div> -->
                 <div class="show-car">
                 <div class="button-show-car">
-                    <div class="VF5 list-button-show-car">
+                    <a class="VF5 list-button-show-car" href="/detail/VF5">
                         <svg width="128" height="24" viewBox="0 0 128 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_9060_7885)">
                                 <path
@@ -95,8 +95,8 @@ $(document).ready(function(){
                                 </clipPath>
                             </defs>
                         </svg>
-                    </div>
-                    <div class="VF6 list-button-show-car">
+                    </a>
+                    <a class="VF6 list-button-show-car" href="/detail/VF6">
                         <svg width="92" height="31" viewBox="0 0 92 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_8158_6100)">
                                 <path
@@ -115,8 +115,8 @@ $(document).ready(function(){
                                 </clipPath>
                             </defs>
                         </svg>
-                    </div>
-                    <div class="VFe34 list-button-show-car">
+                    </a>
+                    <a class="VFe34 list-button-show-car" href="/detail/VFe34">
                         <svg width="123" height="31" viewBox="0 0 123 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_7952_5899)">
                             </g>
@@ -143,8 +143,8 @@ $(document).ready(function(){
                                 </clipPath>
                             </defs>
                         </svg>
-                    </div>
-                    <div class="VF7 list-button-show-car">
+                    </a>
+                    <a class="VF7 list-button-show-car" href="/detail/VF7">
                         <svg width="92" height="24" viewBox="0 0 92 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_8834_7504)">
                                 <path
@@ -163,8 +163,8 @@ $(document).ready(function(){
                                 </clipPath>
                             </defs>
                         </svg>
-                    </div>
-                    <div class="VF8 list-button-show-car">
+                    </a>
+                    <a class="VF8 list-button-show-car" href="/detail/VF8">
                         <svg width="92" height="31" viewBox="0 0 92 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_7952_5908)">
                             </g>
@@ -188,8 +188,8 @@ $(document).ready(function(){
                                 </clipPath>
                             </defs>
                         </svg>
-                    </div>
-                    <div class="VF9 list-button-show-car">
+                    </a>
+                    <a class="VF9 list-button-show-car" href="/detail/VF9">
                         <svg width="92" height="31" viewBox="0 0 92 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_7952_5911)">
                             </g>
@@ -213,7 +213,7 @@ $(document).ready(function(){
                                 </clipPath>
                             </defs>
                         </svg>
-                    </div>
+                    </a>
     
                 </div>
             </div>
