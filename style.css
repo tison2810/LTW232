@@ -87,6 +87,12 @@ body {
   margin-right: 1em;
   text-decoration: none;
 }
+.button-account {
+  flex-grow: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .button-resigter-receive-info {
   display: flex;
   flex-direction: row;
