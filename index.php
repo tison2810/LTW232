@@ -30,16 +30,22 @@ if (isset($_GET['action'])) {
         require_once 'app/views/dashboard.php';
         exit;
     } elseif ($_GET['action'] == 'view_product') {
-        require_once 'app/views/view_product.php';
+        $adminController->index_pro();
         exit;
-    } elseif ($_GET['action'] == 'edit_product') {
-        require_once 'app/views/edit_product.php';
+    } elseif ($_GET['action'] == 'edit_product' && isset($_GET['id'])) {
+        require_once 'view/profile.php';
+        exit;
+    } elseif ($_GET['action'] == 'update_product' && isset($_GET['id']) && !empty($_POST)) {
+        require_once 'view/update_product.php';
         exit;
     } elseif ($_GET['action'] == 'delete_product') {
-        require_once 'app/views/delete_product.php';
+        require_once 'view/delete_product.php';
         exit;
     } elseif ($_GET['action'] == 'add_product') {
-        require_once 'app/views/add_product.php';
+        require_once 'view/profile.php';
+        exit;
+    } elseif ($_GET['action'] == 'push_product' && !empty($_POST)) {
+        require_once 'view/push_product.php';
         exit;
     } elseif ($_GET['action'] == 'view_user') {
         $adminController->index();
@@ -52,6 +58,12 @@ if (isset($_GET['action'])) {
         exit;
     } elseif ($_GET['action'] == 'delete_user' && isset($_GET['id'])) {
         $adminController->deleteUser($_GET['id']);
+        exit;
+    } elseif ($_GET['action'] == 'add_user') {
+        require_once 'view/profile.php';
+        exit;
+    } elseif ($_GET['action'] == 'create_user' && !empty($_POST)) {
+        $adminController->createUser();
         exit;
     } elseif ($_GET['action'] == 'introduction') {
         require_once 'view/introduction.php';

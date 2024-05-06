@@ -1,3 +1,5 @@
+</script>
+<a class="button-account" href="/profile/add_user">Thêm tài khoản</a>
 <table class="table">
 	<thead>
 		<tr style="text-align: center";>

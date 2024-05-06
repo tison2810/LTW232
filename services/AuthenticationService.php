@@ -51,7 +51,7 @@ class AuthenticateService {
     // }
 
 
-    public function register($name, $email, $password, $phone, $address) {
+    public function register($name, $email, $password, $phone, $address, $role) {
         if ($this->is_email_exist($email)) {
             return [
                 'success' => false,
@@ -60,7 +60,7 @@ class AuthenticateService {
         }
         
         $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-        $createUserResult = $this->userRepository->createUser($name, $email, $hashedPassword, $phone, $address);
+        $createUserResult = $this->userRepository->createUser($name, $email, $hashedPassword, $phone, $address, $role);
     
         return [
             'success' => $createUserResult,

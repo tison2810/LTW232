@@ -35,7 +35,7 @@ include_once ('navbar.php');
                     <div class="sidebar-item">QUẢN LÝ NGƯỜI DÙNG</div>
                     <a class="item-select" href="/profile/view_user">Danh sách người dùng</a><br>
                     <div class="sidebar-item">QUẢN LÝ HỆ THỐNG</div>
-                    <a class="item-select" href="/profile/edit_user">Quản lý ô tô</a><br>
+                    <a class="item-select" href="/profile/view_product">Quản lý ô tô</a><br>
                     <a class="item-select" href="#">Quản lý xe máy điện</a><br>
                     <a class="item-select" href="#">Quản lý đơn hàng</a><br>
                     <div class="sidebar-item">TÀI KHOẢN</div>
@@ -67,11 +67,20 @@ include_once ('navbar.php');
                             case 'view_product':
                                 require_once 'view_product.php';
                                 break;
+                            case 'edit_product':
+                                require_once 'edit_product.php';
+                                break;
                             case 'view_user':
                                 require_once 'view_user.php';
                                 break;
                             case 'edit_user':
                                 require_once 'edit_user.php';
+                                break;
+                            case 'add_product':
+                                require_once 'add_product.php';
+                                break;
+                            case 'add_user':
+                                require_once 'add_user.php';
                                 break;
                             default:
                                 require_once 'user_info.php';

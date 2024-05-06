@@ -85,9 +85,9 @@ class UserController
             $password = $_POST['password'];
             $phone = $_POST['phone'];
             $address = $_POST['address'];
-            // $role = Role::USER;
+            $role = Role::USER;
 
-            $registerResult = $this->authService->register($name, $email, $password, $phone, $address);
+            $registerResult = $this->authService->register($name, $email, $password, $phone, $address, $role);
 
             if ($registerResult['success']) {
                 header("Location: /");

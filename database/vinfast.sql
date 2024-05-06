@@ -122,7 +122,7 @@ INSERT INTO Oto VALUES (2, 'VF 8',
                         'VF 8 đạt đến sự kết hợp hoàn hoàn hảo giữa chất lượng và giá trị thông qua công nghệ cao cấp, kỹ thuật sản xuất đặc biệt và dịch vụ tận tâm.',
                         1290000000, 4750, 300, 471)
 
-INSERT INTO Oto VALUES (1, 'VF 9', 
+INSERT INTO Oto VALUES (3, 'VF 9', 
                         'https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dwa6fa7521/images/PDP/vf9/img-CE11.webp',
                         'https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dwa6fa7521/images/PDP/vf9/img-CE18.webp',
                         'https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dwa6fa7521/images/PDP/vf9/img-CE1M.webp',

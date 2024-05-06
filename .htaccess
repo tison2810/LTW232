@@ -4,6 +4,8 @@ RewriteEngine On
 RewriteRule ^logout/?$ index.php?action=logout
 RewriteRule ^register/?$ index.php?action=register
 RewriteRule ^login/?$ index.php?action=login
+RewriteRule ^create_user/?$ index.php?action=create_user
+
 
 # Rewrite URLs for admin actions
 RewriteRule ^dashboard/?$ index.php?action=dashboard
@@ -42,6 +44,14 @@ RewriteRule ^profile/view_user?$ index.php?action=view_user
 RewriteRule ^profile/edit_user/([0-9]+)/?$ index.php?action=edit_user&id=$1
 RewriteRule ^profile/update_user/([0-9]+)/?$ index.php?action=update_user&id=$1
 RewriteRule ^profile/delete_user/([0-9]+)/?$ index.php?action=delete_user&id=$1
+RewriteRule ^profile/add_user?$ index.php?action=add_user
+
+RewriteRule ^profile/view_product?$ index.php?action=view_product
+RewriteRule ^profile/edit_product/([0-9]+)/?$ index.php?action=edit_product&id=$1
+RewriteRule ^profile/update_product/([0-9]+)/?$ index.php?action=update_product&id=$1
+RewriteRule ^profile/delete_product/([0-9]+)/?$ index.php?action=delete_product&id=$1
+RewriteRule ^profile/add_product?$ index.php?action=add_product
+RewriteRule ^profile/push_product?$ index.php?action=push_product
 # RewriteRule ^profile/edit_user?$ index.php?action=edit_user&id=1
 
 RewriteRule ^/?$ index.php

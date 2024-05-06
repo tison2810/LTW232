@@ -163,9 +163,9 @@ class UserRepository
 
 
 
-    public function createUser($name, $email, $password, $phone, $address)
+    public function createUser($name, $email, $password, $phone, $address, $role)
     {
-        $sql = "INSERT INTO khachhang (HoTen, Email, MatKhau, SoDienThoai, Diachi) VALUES (:name, :email, :password, :phone, :address)";
+        $sql = "INSERT INTO khachhang (HoTen, Email, MatKhau, SoDienThoai, Diachi, Role) VALUES (:name, :email, :password, :phone, :address, :role)";
         $stmt = $this->conn->prepare($sql);
 
         $stmt->bindParam(':name', $name, PDO::PARAM_STR);
@@ -173,7 +173,7 @@ class UserRepository
         $stmt->bindParam(':password', $password, PDO::PARAM_STR);
         $stmt->bindParam(':phone', $phone, PDO::PARAM_STR);
         $stmt->bindParam(':address', $address, PDO::PARAM_STR);
-        // $stmt->bindParam(':role', $role, PDO::PARAM_STR);
+        $stmt->bindParam(':role', $role, PDO::PARAM_STR);
 
         return $stmt->execute();
     }

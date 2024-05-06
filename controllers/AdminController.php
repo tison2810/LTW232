@@ -29,7 +29,7 @@ class AdminController
         $userRepository = $this->userRepository;
         $authService = $this->authService;
         $users = $this->userRepository->findAll();
-        require_once 'app/views/view_product.php';
+        require_once 'view/profile.php';
     }
 
     public function index()
@@ -51,7 +51,6 @@ class AdminController
         $user = $this->userRepository->findById($id);
         require_once "view/profile.php";
     }
-
 
     public function updateUser($id, $data)
     {
@@ -80,7 +79,27 @@ class AdminController
         exit;
     }
 
+    public function createUser()
+    {
+        $this->authMiddleware->checkAdmin();
+
+        if (isset($_POST['create_user'])) {
+            $name = $_POST['name'];
+            $email = $_POST['email'];
+            $password = $_POST['password'];
+            $phone = $_POST['phone'];
+            $address = $_POST['address'];
+            $role = $_POST['role'];
+
+            $registerResult = $this->authService->register($name, $email, $password, $phone, $address, $role);
+            if ($registerResult['success']) {
+                header("Location: /profile/view_user");
+                exit;
+            } else {
+                $errorMessage = $registerResult['message'];
+            }
+        exit;
+        }
+    }
 }
-
-
 ?>
