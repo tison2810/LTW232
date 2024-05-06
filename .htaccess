@@ -16,6 +16,9 @@ RewriteRule ^admin/delete/([0-9]+)/?$ index.php?action=delete_user&id=$1
 
 #Rewrite URLs for site routing
 RewriteRule ^introduction/?$ index.php?action=introduction
+RewriteRule ^service/?$ index.php?action=service
+RewriteRule ^shop/?$ index.php?action=shop
+RewriteRule ^home/?$ index.php?action=home
 RewriteRule ^detail/?$ index.php?action=detail
 RewriteRule ^detail/vf5/?$ index.php?action=vf5
 RewriteRule ^detail/vf6/?$ index.php?action=vf6

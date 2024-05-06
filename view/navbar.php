@@ -15,7 +15,7 @@
             <!-- icon -->
             <div>
                 <!-- return main page -->
-                <a href="#">
+                <a href="/home">
                     <img class="logo-main" alt="VinFast-logo"
                         src="https://vinfastauto.com/themes/porto/img/new-home-page/VinFast-logo.svg">
                 </a>
@@ -25,17 +25,17 @@
                 <ul>
                     <!-- Return Giới thiệu page -->
                     <li>
-                        <a href="#" target="_self" class="gioithieu">Giới thiệu</a>
+                        <a href="/introduction" target="_self" class="gioithieu">Giới thiệu</a>
                     </li>
                     <li>
-                        <a href="#" class="car-header">Ô tô</a>
+                        <a href="/shop" class="car-header">Ô tô</a>
                     </li>
                     <li>
                         <a href="#">Xe máy điện</a>
                     </li>
                     <!-- Return Dịch vụ page -->
                     <li>
-                        <a href="#" target="_self" class="dichvu">Dịch vụ</a>
+                        <a href="/service" target="_self" class="dichvu">Dịch vụ</a>
                     </li>
                 </ul>
             </div>
@@ -49,7 +49,7 @@
                         </a>
                     </div>
                     <div class="logout">
-                        <a class="button-logout" href="/logout">Đăng xuất</a>
+                        <a class="button-logout" href="/logout" style="text-decoration: none;">Đăng xuất</a>
                     </div>
                 <?php else: ?>
                     <div class="account">

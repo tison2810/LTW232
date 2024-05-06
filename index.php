@@ -68,6 +68,15 @@ if (isset($_GET['action'])) {
     } elseif ($_GET['action'] == 'introduction') {
         require_once 'view/introduction.php';
         exit;
+    } elseif ($_GET['action'] == 'service') {
+        require_once 'view/service.php';
+        exit;
+    } elseif ($_GET['action'] == 'shop') {
+        require_once 'view/shop.php';
+        exit;
+    } elseif ($_GET['action'] == 'home') {
+        require_once 'home.php';
+        exit;
     } elseif ($_GET['action'] == 'news') {
         require_once 'app/views/news.php';
         exit;

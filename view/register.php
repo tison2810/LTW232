@@ -109,7 +109,7 @@
 					<div class="flex-sb-m w-full p-t-3 p-b-32">
 						<div>
 							Bạn đã có tài khoản?
-							<a href="/login" class="txt1" style="font-size: 18px!important; color: #1464f4;">
+							<a href="/login" class="txt1" style="font-size: 18px!important; color: #1464f4; text-decoration:none">
 								Đăng nhập ngay nào!
 							</a>
 						</div>
