@@ -86,6 +86,9 @@ if (isset($_GET['action'])) {
     } elseif ($_GET['action'] == 'cart') {
         require_once 'view/profile.php';
         exit;
+    } elseif ($_GET['action'] == 'purchase') {
+        require_once 'view/purchase.php';
+        exit;
     } elseif ($_GET['action'] == 'home') {
         require_once 'home.php';
         exit;

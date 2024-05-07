@@ -24,9 +24,8 @@
             $sql = "SELECT * FROM oto WHERE ID IN ($strID)";
             $query = mysqli_query($link, $sql);
             $totalPriceAll = 0;
-           
         ?>
-        <a class="button-account" href="/profile/add_product">Thanh toán</a>
+        <a class="button-account" href="/purchase">Thanh toán</a>
             <table class="table">
                 <thead>
                     <tr style="text-align:center">
@@ -76,9 +75,36 @@
             </table>
             <?php
                 }else{
-                    echo 'Giỏ hàng rỗng';
+                    ?>
+                    <table class="table">
+                <thead>
+                    <tr style="text-align:center">
+                    <th scope="col">Tên</th>
+                        <th scope="col">Ảnh</th>
+                        
+                        <th scope="col">Giá (Gồm Pin)</th>  
+                        <th scope="col">Số lượng</th>
+                        <th scope="col">Edit</th>
+                        <th scope="col">Delete</th>
+                    </tr>
+                </thead>
+                    </table>
+                    <?php
                 }
-                }else{
-            echo 'Giỏ hàng rỗng';
+            }else{
+                ?>
+                <table class="table">
+                <thead>
+                    <tr style="text-align:center">
+                    <th scope="col">Tên</th>
+                        <th scope="col">Ảnh</th>
+                        
+                        <th scope="col">Giá (Gồm Pin)</th>  
+                        <th scope="col">Số lượng</th>
+                        <th scope="col">Edit</th>
+                        <th scope="col">Delete</th>
+                    </tr>
+                </thead>
+                <?php
         }
             ?>

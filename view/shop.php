@@ -20,8 +20,8 @@ include_once ('navbar.php');
     <br></br>
     <br></br>
     <main class="row">
-        <div class="col-lg-2"></div>
-        <div class="col-lg-8">
+        <div class="col-lg-2 col-md-3"></div>
+        <div class="col-lg-8 col-md-7 col-sm-12">
             <div class="row">
                 <?php
                 // Connect to MySQL database
@@ -45,14 +45,14 @@ include_once ('navbar.php');
                 if ($result->num_rows > 0) {
                     while ($row = $result->fetch_assoc()) {
                         ?>
-                        <div class="col-lg-3">
+                        <div class="col-lg-3 col-sm-4 col-6">
                             <div class="card h-100">
                                 <img class="card-img-top" src="<?php echo $row["Anh1"] ?>" alt="<?php echo $row["Ten"] ?>">
-                                    <div class="card-body">
+                                    <div class="card-body d-flex flex-column">
                                         <h5 class="card-title"><?php echo $row["Ten"] ?></h5>
                                         <p class="card-price"><?php echo $row["GiaGomPin"] ?> VNĐ</p>
-                                        <!-- <p class="card-text"><?php echo $row["MoTa"] ?></p> -->
-                                        <a href="/car_detail/<?php echo $row["ID"] ?>" class="btn btn-primary">Mua ngay</a>
+                                        <p class="card-text"><?php echo $row["MoTa"] ?></p>
+                                        <a href="/car_detail/<?php echo $row["ID"] ?>" class="btn btn-primary mt-auto">Mua ngay</a>
                                 </div>
                             </div>
                         </div>

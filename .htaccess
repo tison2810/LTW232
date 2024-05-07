@@ -52,6 +52,7 @@ RewriteRule ^profile/edit_user/([0-9]+)/?$ index.php?action=edit_user&id=$1
 RewriteRule ^profile/update_user/([0-9]+)/?$ index.php?action=update_user&id=$1
 RewriteRule ^profile/delete_user/([0-9]+)/?$ index.php?action=delete_user&id=$1
 RewriteRule ^profile/add_user?$ index.php?action=add_user
+RewriteRule ^purchase/?$ index.php?action=purchase
 
 RewriteRule ^profile/view_product?$ index.php?action=view_product
 RewriteRule ^profile/edit_product/([0-9]+)/?$ index.php?action=edit_product&id=$1

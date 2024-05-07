@@ -87,12 +87,6 @@ body {
   margin-right: 1em;
   text-decoration: none;
 }
-.button-account {
-  flex-grow: 1;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
 .button-resigter-receive-info {
   display: flex;
   flex-direction: row;
@@ -167,8 +161,9 @@ body {
   flex-direction: row;
   margin-right: 20px;
 }
-.menu-content.active {
+.wrap-menu.active {
   display: flex;
+  justify-content: end;
 }
 .body-gioi-thieu.actives {
   display: flex;
@@ -182,20 +177,29 @@ body {
 .body-dich-vu {
   display: none;
 }
-.menu-content {
+.wrap-menu {
   display: none;
   position: fixed;
-  z-index: 1;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.menu-content {
+  position: relative;
+  z-index: 3;
   flex-direction: column;
   min-height: 100%;
-  height: fit-content;
+  /* height: fit-content; */
   width: 17.9166666667%;
-  min-width: 344px;
+  min-width: 244px;
   top: 0;
-  right: 0;
   color: #3c3c3c;
   background-color: rgb(241, 241, 241);
-  padding: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  overflow-y: auto;
 }
 .icon-x {
   margin-top: 19px;
@@ -212,17 +216,28 @@ body {
   left: 0;
   display: block;
   box-sizing: border-box;
+  overflow-y: auto;
 }
 .menu-content-m div {
-  padding-top: 25px; /* Màu chữ khi di chuột vào */
-  padding-bottom: 25px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   border-radius: 5px;
 }
-.menu-content-m div:hover {
+.menu-content-m .div-hover:hover {
   background-color: rgba(117, 162, 246, 0.3);
+}
+.wrap-sub-item {
+  margin-left: 20px;
+  font-size: 17px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #1a1a1a;
 }
 .menu-content-m a {
   margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 0;
   font-size: 17px;
   text-decoration: none;
   font-weight: 600;
@@ -325,6 +340,7 @@ body {
 html,
 body {
   height: 100%;
+  width: 100%;
 }
 .show-car,
 .show-motorbike {
@@ -568,201 +584,256 @@ body {
   margin-top: 20px;
   margin-bottom: 20px;
 }
-
-.container {
+.car-dropdown,
+.motorbike-dropdown {
+  position: fixed;
+  visibility: hidden;
   display: flex;
-  flex-wrap: wrap; /* Cho phép các ô xuống dòng khi không đủ không gian */
-  justify-content: space-between; /* Canh lề giữa các hàng */
+  z-index: 1;
+  top: 75px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #fff;
+  box-shadow: 0 3px 6px #00000029;
 }
-
-.box {
-  width: calc(
-    33.33% - 20px
-  ); /* Đặt chiều rộng của mỗi ô là 33.33% của khối chứa với khoảng cách 20px giữa chúng */
-  margin-bottom: 20px; /* Khoảng cách giữa các hàng */
-}
-
-.box img {
-  width: 100%;
-  height: auto;
-}
-
-.img-banner1 {
-  width: 1280px;
-  height: 900px;
-  float: right;
-  /* margin-right: -300px; */
-}
-
-.img-banner2 {
-  width: 100%;
-  height: auto;
-  text-align: center;
-}
-
-.container1 {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Tạo 4 cột bằng nhau */
-  gap: 20px; /* Khoảng cách giữa các cột */
-  padding-top: -300px;
-  padding-left: 100px;
-  padding-right: 100px;
-}
-
-.box-vinfast34 {
+.car-dropdown-detail,
+.motorbike-dropdown-detail {
   display: flex;
-  justify-content: center; /* Căn giữa theo chiều ngang */
-  align-items: center; /* Căn giữa theo chiều dọc */
-  gap: 20px; /* Khoảng cách giữa các hình ảnh */
-  width: calc(50% - 100px); /* Chiều rộng của mỗi box */
-  padding: 10px; /* Khoảng cách giữa nội dung và viền của box */
-}
-
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px; /* Khoảng cách giữa các ô */
-}
-
-.grid-item {
-  display: flex;
-  flex-direction: column;
+  width: 16, 66667%;
   justify-content: center;
   align-items: center;
 }
-
-.grid-item img {
-  max-width: 100%;
-  height: 100%;
-  border-radius: 5px;
-  
-}
-.bgm{
-  background-color: #efefef;
-}
-.profile{
-  display: grid;
-  /* margin-left: 200px;
-   */
-  justify-content: center;;
-  grid-template-rows: 50px 100px 100px 50px 50px 50px 50px 50px 50px;
-  grid-template-columns: 300px 1000px;
-  gap: 10px;
-}
-.greetname{
-  background-color: #ffffff;
-  border-radius: 3px;
-  display: block;
-  padding: 2px 0px 2px 20px;
-  justify-content: left;
+/* .car-dropdown-detail a{
   text-decoration: none;
-  overflow: hidden;
-}
-.greetname i {
-  font-size: 36px;
-  margin: 5px 15px 0 0;
-  float: left; 
-}
-.greetname .greet {
-  margin: 3px 0 0 0;
-  overflow: hidden;
-  font-size: 14px;
-}
-.greetname .greet h6 {
-  font-weight: bold;
-  margin: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap; 
-  max-width: calc(100% - 20px);
-  font-size: 14px;
-}
-.sidebar{
-  background-color: rgb(255, 255, 255);
-  grid-area: 2/ 1/ 9/ 2;
-  border-radius: 3px;
-}
-.maincontent{
-  background-color: rgb(255, 255, 255);
-  grid-area: 1/ 2/ 9/ 3;
-  border-radius: 3px;
-  display: grid;
-  grid-template-columns: 330px 500px 180px;
-}
-.component{
-  /* background-color: aqua; */
-  grid-column: 1 2;
-  padding: 15px;
-}
-.component-form{
-  margin-top: 25px;
-}
-.data{
-  /* background-color: #ce2121; */
-  grid-column: 2 3;
-  padding: 15px;
-}
-.data-form{
-  margin-top: 50px;
-}
-.edit{
-  padding: 15px;
-}
-.edit-profile{
-  text-decoration: none;
-}
-.change-info{
-  background-color: rgb(255, 255, 255);
-  grid-area: 1/ 2/ 9/ 3;
-  border-radius: 3px;
-  display: grid;
-  grid-template-columns: 330px 340px 330px;
-}
-.change-info-form{
-  margin-top: 50px;
-  grid-area: 1/2/9/3;
-}
-.change-info-car1{
-  /* margin-top: 50px; */
-  grid-column: 1 / 2;
-}
-.change-info-car2{
-  /* margin-top: 50px; */
-  grid-area: 3 / 4;
-}
-.submit-button{
-  grid-area: 8/ 3/ 9/ 4;
-}
-.submit-button-car{
-  grid-area: 7/ 3/ 8/ 4;
-}
-
-.sidebar-item{
-  /* margin-left: 10px; */
-  /* padding: 5px; */
-  padding: 10px;
-  /* margin-top: 10px; */
-  margin-left: 10px;
-  justify-content: center;
-  text-decoration: none;
-  font-weight: bold;
-}
-.item-select{
+} */
+.car-dropdown-detail-a,
+.motorbike-dropdown-detail-a {
   display: flex;
-  padding: 4px;
-  margin-left: 15px;
-  /* justify-content: center; */
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
   text-decoration: none;
-  color: black;
+  color: #1a1a1a;
+  font-weight: 600;
+  border-radius: 7px;
 }
-.card-img-top {
+.car-dropdown-detail-a:hover,
+.motorbike-dropdown-detail-a:hover {
+  background-color: #afc6f16c;
+}
+.sub-item {
+  margin-left: 50px !important;
+  font-size: 17px !important;
+  font-weight: 400 !important;
+}
+body.hidden_scroll {
+  overflow: hidden; /* Vô hiệu hóa cuộn trang chính khi menu mở ra */
+}
+
+.logo-container {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* CSS cho hình ảnh logo */
+.logo-container img {
+  width: 200px;
+  height: auto;
+}
+
+.message-container p {
+  font-size: 40px; /* Điều chỉnh kích thước của chữ */
+  font-weight: bold; /* Điều chỉnh độ đậm của chữ */
+  text-align: center;
+  line-height: 0.2;
+  color: #1464f4;
+}
+
+/* CSS cho hình chữ nhật */
+.green-rectangle {
+  width: 100%; /* Độ rộng của hình chữ nhật */
+  height: 20%; /* Độ cao của hình chữ nhật */
+  background: linear-gradient(to right, #95b4d8, #455cad);
+}
+
+.img-container {
+  position: absolute; /* Đặt vị trí tuyệt đối */
+  left: 50%; /* Đặt vị trí ở giữa theo chiều ngang */
+  transform: translate(-50%, -50%);
+}
+
+.button-container {
+  position: fixed; /* Đặt vị trí cố định */
+  bottom: 10%; /* Đặt vị trí ở giữa theo chiều dọc */
+  left: 50%; /* Đặt vị trí ở giữa theo chiều ngang */
+  transform: translate(-50%, -50%);
+}
+
+.contact-link {
+  color: #007bff; /* Màu xanh dương */
+  text-decoration: none; /* Loại bỏ gạch chân dưới liên kết */
+  text-align: center; /* Căn giữa văn bản */
+}
+
+.contact-link:hover {
+  text-decoration: underline; /* Gạch chân dưới liên kết khi di chuột qua */
+}
+
+/* CSS cho nút trở về */
+.return-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4cae5a; /* Màu nền */
+  color: white; /* Màu chữ */
+  text-decoration: none; /* Loại bỏ gạch chân dưới liên kết */
+  border-radius: 5px; /* Góc cong */
+  margin-top: 20px; /* Khoảng cách từ nút đến thông tin liên hệ */
+}
+
+.return-button:hover {
+  background-color: #368946; /* Màu nền xanh nhạt khi di chuột qua */
+}
+
+.banner-container {
+  position: absolute;
+  align-items: center;
+}
+
+.banner-container img {
   width: 100%;
-  height: 15vw;
-  object-fit: contain;
-  transition: 0.5s ease;
+  height: auto;
 }
-.card:hover{
-  .card-img-top{
-    transform: scale(1.5);
-};
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Notesssssssssssssssssssssdsadwawwwwwwwwwwwwwwwwwwwwwwwwssssâfsfssssssssssssssssssss */
+@media only screen and (max-width: 3000px) {
+  /* Header */
+  nav {
+    margin-bottom: 3rem;
+    background-color: rgb(192, 219, 238);
+  }
+  .header-link {
+    display: block;
+    padding: 0.5rem 0.5rem;
+    color: rgb(13, 67, 92);
+    font-size: 1em;
+    font-weight: bold;
+  }
+  /* End Header */
+  /* Left Column */
+  aside h1 {
+    font-size: 1.2em;
+    background-color: rgb(21, 110, 161);
+    text-align: center;
+    padding: 8px 15px;
+    border: none;
+    color: whitesmoke;
+  }
+  aside ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  aside a {
+    font-size: 1em;
+    color: rgb(43, 132, 184);
+  }
+  aside a:hover {
+    text-decoration: none;
+    font-size: 1em;
+    color: rgb(6, 41, 70);
+  }
+  /* End Left Column */
+  /* Center block - Product images */
+  .box-bottom {
+    margin-top: 10px;
+    display: flex;
+    text-align: center;
+  }
+  .box-bottom img {
+    width: 4.8em;
+    height: 4.8em;
+    padding: 3px;
+    object-fit: scale-down;
+  }
+  /* End Product images */
+  /* Center block - Product content */
+  .btn-danger {
+    background-color: rgb(53, 132, 196);
+    border-color: rgb(53, 132, 196);
+  }
+  .btn-danger:hover {
+    background-color: rgb(6, 41, 70);
+    border-color: rgb(6, 41, 70);
+  }
+  .tab-content {
+    text-align: left;
+  }
+  .tab-content p {
+    text-align: left;
+  }
+  .title {
+    text-align: left;
+  }
+  .tab-content h2 {
+    font-weight: normal;
+    color: rgb(13, 67, 92);
+  }
+  /* End Product content */
+  /* Center block - Product Info Table */
+  h3 {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: rgb(13, 67, 92);
+  }
+  table {
+    width: 30em;
+    font-size: 1em;
+    font-weight: normal;
+    color: rgb(13, 67, 92);
+  }
+  table,
+  tr,
+  td {
+    border: 1.5px solid grey;
+    padding: auto;
+  }
+  /* End Product Info Table */
+  /* End center block */
+  /* Right column banner */
+  .banner {
+    background-color: rgb(39, 101, 151);
+    width: 180px;
+    height: 600px;
+  }
+  /* End banner */
+  /* Footer*/
+  footer {
+    margin-top: 7rem;
+    padding: 15px;
+    color: rgb(171, 217, 238);
+    text-align: center;
+    background-color: rgb(30, 115, 172);
+    width: 100%;
+  }
+  footer a:hover,
+  .footer-link {
+    color: whitesmoke;
+  }
+  /* End Footer*/
+  /* -------------------------------------- */
+  /*Hide banner2*/
+  img.hidden2 {
+    width: 0;
+    height: 0;
+    display: none;
+  }
 }
