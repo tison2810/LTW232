@@ -1,81 +1,93 @@
-@media (max-width: 992px){.header-center{
+@media (max-width: 992px) {
+  .header-center {
     display: none !important;
-}}
-@media (min-width: 992px){.account-icon{
-    display: none !important;
-}}
-@media (max-width: 992px){.account{
-    display: none !important;
-}}
-@media (max-width: 992px){.list-button-show-motorbike{
-  display: none ;
-}}
-@media (max-width: 992px){.list-button-show-car{
-  display: none ;
-}}
-.header{
-    position: fixed;
-    box-sizing: border-box;
-    background-color: #fff;
-    width: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: space-between;
-    padding: 14px 30px;
-    align-items: center;
-    z-index: 1;
+  }
 }
-.header-center ul{
-    display: flex;  
-    list-style-type: none; 
-    padding: 0; /* Loại bỏ padding mặc định của danh sách */
-    margin: 0;
-    justify-content: space-between;
+@media (min-width: 992px) {
+  .account-icon {
+    display: none !important;
+  }
+}
+@media (max-width: 992px) {
+  .account {
+    display: none !important;
+  }
+}
+@media (max-width: 992px) {
+  .list-button-show-motorbike {
+    display: none;
+  }
+}
+@media (max-width: 992px) {
+  .list-button-show-car {
+    display: none;
+  }
+}
+.header {
+  position: fixed;
+  box-sizing: border-box;
+  background-color: #fff;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 30px;
+  align-items: center;
+  z-index: 1;
+}
+.header-center ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0; /* Loại bỏ padding mặc định của danh sách */
+  margin: 0;
+  justify-content: space-between;
 }
 .header-center ul li {
-    margin: 0 18px;
+  margin: 0 18px;
 }
 .header-center a:hover {
-    color: rgb(89, 134, 218); /* Màu chữ khi di chuột vào */
+  color: rgb(89, 134, 218); /* Màu chữ khi di chuột vào */
 }
 .header-center a {
-    font-size: 17px;
-    text-decoration: none;
-    font-weight: 600;
-    color: #1a1a1a;
+  font-size: 17px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #1a1a1a;
 }
 body {
-    font-family: 'Mulish', sans-serif;
-    letter-spacing: -.02rem;
-    color: #1a1a1a;
-    font-weight: 400;
-    font-size: 16px;
+  font-family: "Mulish", sans-serif;
+  letter-spacing: -0.02rem;
+  color: #1a1a1a;
+  font-weight: 400;
+  font-size: 16px;
 }
-.button-account ,.button-detail-car,.button-detail-motorbike{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 15px 24px;
-    width: 171px;
-    background: #1464f4;
-    border-radius: 3px;
-    font-weight: 700;
-    font-size: 12px;
-    line-height: 15px;
-    text-align: center;
-    letter-spacing: .1em;
-    text-transform: uppercase;
-    color: #fff!important;
-    height: auto;
-    box-sizing: border-box;
-    border: 1px solid #2c72c6;
-    margin-right: 1em;
-    text-decoration: none;
+.button-account,
+.button-detail-car,
+.button-detail-motorbike {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 24px;
+  width: 171px;
+  background: #1464f4;
+  border-radius: 3px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #fff !important;
+  height: auto;
+  box-sizing: border-box;
+  border: 1px solid #2c72c6;
+  margin-right: 1em;
+  text-decoration: none;
 }
-.button-resigter-receive-info{
+.button-resigter-receive-info {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -87,243 +99,257 @@ body {
   font-size: 12px;
   line-height: 15px;
   text-align: center;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #fff!important;
+  color: #fff !important;
   height: auto;
   box-sizing: border-box;
   border: 1px solid #2c72c6;
   text-decoration: none;
 }
-.button-account:hover, .button-account:focus ,.button-detail-car:hover ,.button-detail-car:focus,.button-detail-motorbike:hover ,.button-detail-motorbike:focus,.button-resigter-receive-info:hover,.button-resigter-receive-info:focus{
-    background: #fff;
-    color: #1464f4!important;
-    border-color: #1464f4
+.button-account:hover,
+.button-account:focus,
+.button-detail-car:hover,
+.button-detail-car:focus,
+.button-detail-motorbike:hover,
+.button-detail-motorbike:focus,
+.button-resigter-receive-info:hover,
+.button-resigter-receive-info:focus {
+  background: #fff;
+  color: #1464f4 !important;
+  border-color: #1464f4;
 }
 .account {
-    margin-right: 30px;
+  margin-right: 30px;
 }
-.account-icon{
-    margin-right: 30px;
-    margin-top:5px;
+.account-icon {
+  margin-right: 30px;
+  margin-top: 5px;
 }
 #menu span {
-    display: block;
-    position: absolute;
-    height: 0;
-    width: 100%;
-    border-bottom: 2px #1f2125 solid;
-    border-radius: 0;
-    opacity: 1;
-    left: 0
+  display: block;
+  position: absolute;
+  height: 0;
+  width: 100%;
+  border-bottom: 2px #1f2125 solid;
+  border-radius: 0;
+  opacity: 1;
+  left: 0;
 }
 #menu span:last-child {
-    width: 100%
+  width: 100%;
 }
 #menu span:nth-child(1) {
-    top: 0
+  top: 0;
 }
 
 #menu span:nth-child(2) {
-    top: 5.5px
+  top: 5.5px;
 }
 #menu span:nth-child(3) {
-    bottom: 0
+  bottom: 0;
 }
 #menu {
-    width: 20px;
-    height: 13px;
-    position: relative;
-    cursor: pointer;
-} 
-.head-right{
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    margin-right: 20px;
+  width: 20px;
+  height: 13px;
+  position: relative;
+  cursor: pointer;
+}
+.head-right {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin-right: 20px;
 }
 .wrap-menu.active {
-    display: flex;
-    justify-content: end;
-  }
-  .body-gioi-thieu.actives{
-    display: flex;
-  }
-  .body-gioi-thieu{
-    display: none;
-  }
-  .body-dich-vu.actives{
-    display: flex;
-  }
-  .body-dich-vu{
-    display: none;
-  }
-  .wrap-menu{
-    display: none;
-    position: fixed;
-    z-index: 3;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-  }
+  display: flex;
+  justify-content: end;
+}
+.body-gioi-thieu.actives {
+  display: flex;
+}
+.body-gioi-thieu {
+  display: none;
+}
+.body-dich-vu.actives {
+  display: flex;
+}
+.body-dich-vu {
+  display: none;
+}
+.wrap-menu {
+  display: none;
+  position: fixed;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
 .menu-content {
-    position: relative;
-    z-index: 3;
-    flex-direction: column;
-    min-height: 100%;
-    /* height: fit-content; */
-    width: 17.9166666667%;
-    min-width: 244px; 
-    top: 0;
-    color: #3c3c3c;
-    background-color: rgb(241, 241, 241);
-    padding-left: 30px;
-    padding-right: 30px;
-    overflow-y: auto;
+  position: relative;
+  z-index: 3;
+  flex-direction: column;
+  min-height: 100%;
+  /* height: fit-content; */
+  width: 17.9166666667%;
+  min-width: 244px;
+  top: 0;
+  color: #3c3c3c;
+  background-color: rgb(241, 241, 241);
+  padding-left: 30px;
+  padding-right: 30px;
+  overflow-y: auto;
 }
-.icon-x{
-    margin-top: 19px;
-    margin-right: 15px; 
+.icon-x {
+  margin-top: 19px;
+  margin-right: 15px;
 }
-.box-icon-x{
-    display: flex;
-    justify-content: flex-end;
+.box-icon-x {
+  display: flex;
+  justify-content: flex-end;
 }
-.menu-content-m{
-    display: flex;
-    flex-direction: column;
-    bottom: 0;
-    left: 0;
-    display: block;
-    box-sizing: border-box; 
-    overflow-y: auto;
+.menu-content-m {
+  display: flex;
+  flex-direction: column;
+  bottom: 0;
+  left: 0;
+  display: block;
+  box-sizing: border-box;
+  overflow-y: auto;
 }
 .menu-content-m div {
-    padding-top: 15px; 
-    padding-bottom: 15px; 
-    border-radius: 5px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: 5px;
 }
 .menu-content-m .div-hover:hover {
-    background-color: rgba(117, 162, 246, 0.3);
+  background-color: rgba(117, 162, 246, 0.3);
 }
 .wrap-sub-item {
   margin-left: 20px;
   font-size: 17px;
-    text-decoration: none;
-    font-weight: 600;
-    color: #1a1a1a;
+  text-decoration: none;
+  font-weight: 600;
+  color: #1a1a1a;
 }
-.menu-content-m a{
-    margin-left: 20px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding: 0;
-    font-size: 17px;
-    text-decoration: none;
-    font-weight: 600;
-    color: #1a1a1a;
-} 
-.position-indicator{
-    position: absolute;
-    width: 100%;
-    height: 20%;
-    bottom: 0;
-    background-image: linear-gradient(to top,rgba(26, 27, 29, 0.618), rgba(0, 0, 0, 0));
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-end;
-   }
-   .position-indicator span{
-    width: 20px;
-    height: 20px;
-    margin-right: 20px; 
-    margin-bottom: 20px;
-    cursor: pointer;
-    background: #fff;
-    opacity: 0.5;
-    border-radius: 50%;
-   }
-   .position-indicator span.active{
-    background: #edeff1 !important;
-    opacity: 1 !important;
-   }
-   .mySlides{
-    display: none;
-    position: relative;
-    width: 100%;
-    height: 100%;
-  }
-  
+.menu-content-m a {
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 0;
+  font-size: 17px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+.position-indicator {
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  bottom: 0;
+  background-image: linear-gradient(
+    to top,
+    rgba(26, 27, 29, 0.618),
+    rgba(0, 0, 0, 0)
+  );
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+}
+.position-indicator span {
+  width: 20px;
+  height: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  background: #fff;
+  opacity: 0.5;
+  border-radius: 50%;
+}
+.position-indicator span.active {
+  background: #edeff1 !important;
+  opacity: 1 !important;
+}
+.mySlides {
+  display: none;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
 .mySlides.active {
-    display: flex;
+  display: flex;
+}
+.slideshow-container {
+  display: flex;
+}
+.fade {
+  animation: fade 1s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
   }
-  .slideshow-container{
-    display: flex;
-  }
-   .fade {
-    animation: fade 1s;
-  }
-  
-  @keyframes fade {
-    from {
-      opacity: 0.4;
-    }
-  
-    to {
-      opacity: 1;
-    }
-  } 
-  
-  .prev, .next {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: none;
-    outline: none;
-    background-color: rgba(255, 255, 255, 0.3);
-    color: rgb(30, 29, 29);
-    font-size: 24px;
-    cursor: pointer;
-    transition: background-color 0.3s, opacity 0.3s;
-  }
-  .prev:hover, .next:hover {
-    background-color: rgb(240, 240, 246);
-    color: rgb(20, 88, 182);
+
+  to {
     opacity: 1;
+  }
 }
-  
-  .prev {
-    left: 20px;
 
-  }
-  
-  .next {
-    right: 20px;
-
-  }
-  .body-main{
-    position: relative;
-    height: 100%;
-    object-fit: cover;
-  }
-  html,body {
-    height: 100%;
-    width: 100%;
+.prev,
+.next {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: rgb(30, 29, 29);
+  font-size: 24px;
+  cursor: pointer;
+  transition: background-color 0.3s, opacity 0.3s;
 }
-.show-car, .show-motorbike{
+.prev:hover,
+.next:hover {
+  background-color: rgb(240, 240, 246);
+  color: rgb(20, 88, 182);
+  opacity: 1;
+}
+
+.prev {
+  left: 20px;
+}
+
+.next {
+  right: 20px;
+}
+.body-main {
+  position: relative;
+  height: 100%;
+  object-fit: cover;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+.show-car,
+.show-motorbike {
   display: flex;
   flex-direction: column;
   position: relative;
 }
-.button-show-car,.button-show-motorbike{
+.button-show-car,
+.button-show-motorbike {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -335,263 +361,479 @@ body {
 }
 .button-show-car .list-button-show-car {
   cursor: pointer;
-  } 
-  .button-show-motorbike .list-button-show-motorbike {
-    cursor: pointer;
-    } 
-  .img-car, .img-motorbike{
-    display: none;
-  }
-  .img-VF5.active, .img-Evo200Lite.active{
-    display: flex !important;
-    flex-direction: row;
-    justify-content: center;
-  }
-  .img-VFe34.active, .img-FelizS34.active{
-    display: flex !important;
-    flex-direction: row;
-    justify-content: center;
-  }
-  .img-VF7.active , .img-KlaraS.active{
-    display: flex !important;
-    flex-direction: row;
-    justify-content: center;
-  }
-  .img-VF8.active ,  .img-VentoS.active{
-    display: flex !important;
-    flex-direction: row;
-    justify-content: center;
-  }
-  .img-VF9.active, .img-TheonS.active{
-    display: flex !important;
-    flex-direction: row;
-    justify-content: center;
-  }
-  .img-VF6.active, .img-Evo200.active{
-    display: flex !important;
-    flex-direction: row;
-    justify-content: center;
-  }
-  .show-car .prev {
-    left: 100px;
-
-  }
-  .show-motorbike .prev {
-    left: 100px;
-
-  }
-  
-  .show-car .next {
-    right: 100px;
-
-  }
-  .show-motorbike .next {
-    right: 100px;
-
-  }
-
-  .info-car-detail, .info-motorbike-detail{
-    text-align: center;
-  }
-  .info-car-detail p{
-    font-weight: 600;
-  }
-  .info-motorbike-detail p{
-    font-weight: 600;
-  }
-  .detail-car, .detail-motorbike{
-    display: flex;
-    justify-content: center;
-    padding-top: 40px;
-    padding-bottom: 40px;
-  }
-  .V-info-car, .V-info-motorbike{
-    display: none;
-  }
-  .V-info-car.active{
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 250px;
-    align-items: center;
-  }
-  .V-info-motorbike.active{
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 250px;
-    align-items: center;
-  }
-  .receive-info{
-    display: flex;
-    justify-content: center;
-    padding: 6rem 0;
-    margin-top: 6rem;
-    background: url(https://vinfastauto.com/themes/porto/img/homepage-v2/join-the-charge.webp) no-repeat scroll left center transparent;
-    background-size: cover;
 }
-.detail-receive-info{
+.button-show-motorbike .list-button-show-motorbike {
+  cursor: pointer;
+}
+.img-car,
+.img-motorbike {
+  display: none;
+}
+.img-VF5.active,
+.img-Evo200Lite.active {
+  display: flex !important;
+  flex-direction: row;
+  justify-content: center;
+}
+.img-VFe34.active,
+.img-FelizS34.active {
+  display: flex !important;
+  flex-direction: row;
+  justify-content: center;
+}
+.img-VF7.active,
+.img-KlaraS.active {
+  display: flex !important;
+  flex-direction: row;
+  justify-content: center;
+}
+.img-VF8.active,
+.img-VentoS.active {
+  display: flex !important;
+  flex-direction: row;
+  justify-content: center;
+}
+.img-VF9.active,
+.img-TheonS.active {
+  display: flex !important;
+  flex-direction: row;
+  justify-content: center;
+}
+.img-VF6.active,
+.img-Evo200.active {
+  display: flex !important;
+  flex-direction: row;
+  justify-content: center;
+}
+.show-car .prev {
+  left: 100px;
+}
+.show-motorbike .prev {
+  left: 100px;
+}
+
+.show-car .next {
+  right: 100px;
+}
+.show-motorbike .next {
+  right: 100px;
+}
+
+.info-car-detail,
+.info-motorbike-detail {
+  text-align: center;
+}
+.info-car-detail p {
+  font-weight: 600;
+}
+.info-motorbike-detail p {
+  font-weight: 600;
+}
+.detail-car,
+.detail-motorbike {
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.V-info-car,
+.V-info-motorbike {
+  display: none;
+}
+.V-info-car.active {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 250px;
+  align-items: center;
+}
+.V-info-motorbike.active {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 250px;
+  align-items: center;
+}
+.receive-info {
+  display: flex;
+  justify-content: center;
+  padding: 6rem 0;
+  margin-top: 6rem;
+  background: url(https://vinfastauto.com/themes/porto/img/homepage-v2/join-the-charge.webp)
+    no-repeat scroll left center transparent;
+  background-size: cover;
+}
+.detail-receive-info {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.detail-receive-info-1{
+.detail-receive-info-1 {
   font-size: 1.5rem;
-    font-style: normal;
-    font-weight: 600;
-    text-align: center;
-    color: #fff;
-    margin-bottom: 20px;
+  font-style: normal;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 20px;
 }
-.detail-receive-info-2{
+.detail-receive-info-2 {
   font-size: 1.125rem;
   font-weight: 400;
   line-height: 150%;
   color: #fff;
   margin-bottom: 20px;
 }
-.detail-receive-info-3{
+.detail-receive-info-3 {
   color: #fff;
-  font-size: .75rem;
+  font-size: 0.75rem;
   font-weight: 400;
   line-height: 150%;
   margin-top: 20px;
 }
-.form-email{
-    width: 500px;
-    height: 46.6px;
-    font-weight: 600;
-    font-size: 1rem;
-    line-height: 1.5rem;
-    box-shadow: none;
-    background: #fff;
-    border: none;
-    /* padding:20px 30px; */
-    border-radius: 0;
+.form-email {
+  width: 500px;
+  height: 46.6px;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  box-shadow: none;
+  background: #fff;
+  border: none;
+  /* padding:20px 30px; */
+  border-radius: 0;
 }
 .form-email:focus {
   outline: none; /* Loại bỏ viền focus mặc định của trình duyệt */
 }
-.detail-receive-info-4{
+.detail-receive-info-4 {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
 }
-.footer-main{
+.footer-main {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   padding: 30px 0;
 }
-.footer-main-1{
+.footer-main-1 {
   display: flex;
   flex-direction: column;
   align-items: left;
   justify-content: space-between;
   width: 50%;
 }
-.footer-main-2{
+.footer-main-2 {
   display: flex;
   flex-direction: column;
   align-items: left;
   justify-content: space-between;
   width: 25%;
 }
-.footer-main-2 div{
+.footer-main-2 div {
   padding: 20px;
   font-weight: 700;
-    font-size: 14px;
-    line-height: 150%;
-    text-transform: uppercase;
-
+  font-size: 14px;
+  line-height: 150%;
+  text-transform: uppercase;
 }
-.footer-main-2 div a{
+.footer-main-2 div a {
   text-decoration: none;
   color: #3c3c3c !important;
 }
-.footer-main-3 a{
+.footer-main-3 a {
   text-decoration: none;
 }
-.footer-main-3{
+.footer-main-3 {
   display: flex;
   flex-direction: column;
   align-items: left;
   justify-content: start;
   width: 25%;
 }
-.footer-main-1-content{
+.footer-main-1-content {
   max-width: 500px;
 }
-.ecosystem-copy-right{
+.ecosystem-copy-right {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-.copy-right{
+.copy-right {
   font-style: normal;
   font-weight: 400;
-  font-size: .75rem;
+  font-size: 0.75rem;
   line-height: 1.5rem;
-  letter-spacing: -.02rem;
+  letter-spacing: -0.02rem;
   color: #3c3c3c;
 }
-.bct-wrapper{
+.bct-wrapper {
   margin-right: 20px;
 }
-.social-item{
+.social-item {
   margin-right: 30px;
 }
-.hotline-email{
+.hotline-email {
   display: flex;
   flex-direction: column;
 }
-.connect-vf{
+.connect-vf {
   display: flex;
   flex-direction: column;
   margin-top: 20px;
   margin-bottom: 20px;
 }
-.car-dropdown, .motorbike-dropdown{
-position: fixed;
-visibility: hidden;
-display: flex;
-z-index: 1;
-top: 75px;
-padding-top: 30px;
-padding-bottom: 30px;
-padding-left: 20px;
-padding-right: 20px;
-background-color: #fff;
-box-shadow: 0 3px 6px #00000029;
+.car-dropdown,
+.motorbike-dropdown {
+  position: fixed;
+  visibility: hidden;
+  display: flex;
+  z-index: 1;
+  top: 75px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #fff;
+  box-shadow: 0 3px 6px #00000029;
 }
-.car-dropdown-detail , .motorbike-dropdown-detail{
-display: flex;
-width: 16,66667%;
-justify-content: center;
-align-items: center;
+.car-dropdown-detail,
+.motorbike-dropdown-detail {
+  display: flex;
+  width: 16, 66667%;
+  justify-content: center;
+  align-items: center;
 }
 /* .car-dropdown-detail a{
   text-decoration: none;
 } */
-.car-dropdown-detail-a, .motorbike-dropdown-detail-a{
+.car-dropdown-detail-a,
+.motorbike-dropdown-detail-a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 80%; 
+  width: 80%;
   text-decoration: none;
   color: #1a1a1a;
   font-weight: 600;
   border-radius: 7px;
 }
-.car-dropdown-detail-a:hover, .motorbike-dropdown-detail-a:hover{
+.car-dropdown-detail-a:hover,
+.motorbike-dropdown-detail-a:hover {
   background-color: #afc6f16c;
 }
-.sub-item{
+.sub-item {
   margin-left: 50px !important;
   font-size: 17px !important;
-    font-weight: 400 !important;
+  font-weight: 400 !important;
 }
 body.hidden_scroll {
   overflow: hidden; /* Vô hiệu hóa cuộn trang chính khi menu mở ra */
+}
+
+.logo-container {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* CSS cho hình ảnh logo */
+.logo-container img {
+  width: 200px;
+  height: auto;
+}
+
+.message-container p {
+  font-size: 40px; /* Điều chỉnh kích thước của chữ */
+  font-weight: bold; /* Điều chỉnh độ đậm của chữ */
+  text-align: center;
+  line-height: 0.2;
+  color: #1464f4;
+}
+
+/* CSS cho hình chữ nhật */
+.green-rectangle {
+  width: 100%; /* Độ rộng của hình chữ nhật */
+  height: 20%; /* Độ cao của hình chữ nhật */
+  background: linear-gradient(to right, #95b4d8, #455cad);
+}
+
+.img-container {
+  position: absolute; /* Đặt vị trí tuyệt đối */
+  left: 50%; /* Đặt vị trí ở giữa theo chiều ngang */
+  transform: translate(-50%, -50%);
+}
+
+.button-container {
+  position: fixed; /* Đặt vị trí cố định */
+  bottom: 10%; /* Đặt vị trí ở giữa theo chiều dọc */
+  left: 50%; /* Đặt vị trí ở giữa theo chiều ngang */
+  transform: translate(-50%, -50%);
+}
+
+.contact-link {
+  color: #007bff; /* Màu xanh dương */
+  text-decoration: none; /* Loại bỏ gạch chân dưới liên kết */
+  text-align: center; /* Căn giữa văn bản */
+}
+
+.contact-link:hover {
+  text-decoration: underline; /* Gạch chân dưới liên kết khi di chuột qua */
+}
+
+/* CSS cho nút trở về */
+.return-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4cae5a; /* Màu nền */
+  color: white; /* Màu chữ */
+  text-decoration: none; /* Loại bỏ gạch chân dưới liên kết */
+  border-radius: 5px; /* Góc cong */
+  margin-top: 20px; /* Khoảng cách từ nút đến thông tin liên hệ */
+}
+
+.return-button:hover {
+  background-color: #368946; /* Màu nền xanh nhạt khi di chuột qua */
+}
+
+.banner-container {
+  position: absolute;
+  align-items: center;
+}
+
+.banner-container img {
+  width: 100%;
+  height: auto;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Notesssssssssssssssssssssdsadwawwwwwwwwwwwwwwwwwwwwwwwwssssâfsfssssssssssssssssssss */
+@media only screen and (max-width: 3000px) {
+  /* Header */
+  nav {
+    margin-bottom: 3rem;
+    background-color: rgb(192, 219, 238);
+  }
+  .header-link {
+    display: block;
+    padding: 0.5rem 0.5rem;
+    color: rgb(13, 67, 92);
+    font-size: 1em;
+    font-weight: bold;
+  }
+  /* End Header */
+  /* Left Column */
+  aside h1 {
+    font-size: 1.2em;
+    background-color: rgb(21, 110, 161);
+    text-align: center;
+    padding: 8px 15px;
+    border: none;
+    color: whitesmoke;
+  }
+  aside ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  aside a {
+    font-size: 1em;
+    color: rgb(43, 132, 184);
+  }
+  aside a:hover {
+    text-decoration: none;
+    font-size: 1em;
+    color: rgb(6, 41, 70);
+  }
+  /* End Left Column */
+  /* Center block - Product images */
+  .box-bottom {
+    margin-top: 10px;
+    display: flex;
+    text-align: center;
+  }
+  .box-bottom img {
+    width: 4.8em;
+    height: 4.8em;
+    padding: 3px;
+    object-fit: scale-down;
+  }
+  /* End Product images */
+  /* Center block - Product content */
+  .btn-danger {
+    background-color: rgb(53, 132, 196);
+    border-color: rgb(53, 132, 196);
+  }
+  .btn-danger:hover {
+    background-color: rgb(6, 41, 70);
+    border-color: rgb(6, 41, 70);
+  }
+  .tab-content {
+    text-align: left;
+  }
+  .tab-content p {
+    text-align: left;
+  }
+  .title {
+    text-align: left;
+  }
+  .tab-content h2 {
+    font-weight: normal;
+    color: rgb(13, 67, 92);
+  }
+  /* End Product content */
+  /* Center block - Product Info Table */
+  h3 {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: rgb(13, 67, 92);
+  }
+  table {
+    width: 30em;
+    font-size: 1em;
+    font-weight: normal;
+    color: rgb(13, 67, 92);
+  }
+  table,
+  tr,
+  td {
+    border: 1.5px solid grey;
+    padding: auto;
+  }
+  /* End Product Info Table */
+  /* End center block */
+  /* Right column banner */
+  .banner {
+    background-color: rgb(39, 101, 151);
+    width: 180px;
+    height: 600px;
+  }
+  /* End banner */
+  /* Footer*/
+  footer {
+    margin-top: 7rem;
+    padding: 15px;
+    color: rgb(171, 217, 238);
+    text-align: center;
+    background-color: rgb(30, 115, 172);
+    width: 100%;
+  }
+  footer a:hover,
+  .footer-link {
+    color: whitesmoke;
+  }
+  /* End Footer*/
+  /* -------------------------------------- */
+  /*Hide banner2*/
+  img.hidden2 {
+    width: 0;
+    height: 0;
+    display: none;
+  }
 }
