@@ -19,6 +19,9 @@ RewriteRule ^introduction/?$ index.php?action=introduction
 RewriteRule ^service/?$ index.php?action=service
 RewriteRule ^shop/?$ index.php?action=shop
 RewriteRule ^home/?$ index.php?action=home
+RewriteRule ^car_detail/([0-9]+)/?$ index.php?action=car_detail&id=$1
+RewriteRule ^add_cart/([0-9]+)/?$ index.php?action=add_cart&id=$1
+RewriteRule ^delete_cart/([0-9]+)/?$ index.php?action=delete_cart&id=$1
 RewriteRule ^detail/?$ index.php?action=detail
 RewriteRule ^detail/vf5/?$ index.php?action=vf5
 RewriteRule ^detail/vf6/?$ index.php?action=vf6
@@ -37,6 +40,7 @@ RewriteRule ^cart/?$ index.php?action=cart
 RewriteRule ^profile/?$ index.php?action=profile
 RewriteRule ^update_profile/?$ index.php?action=update_profile
 RewriteRule ^profile/change_info/?$ index.php?action=change_info
+RewriteRule ^profile/cart/?$ index.php?action=cart
 RewriteRule ^profile/change_password/?$ index.php?action=change_password
 RewriteRule ^profile/site_settings/?$ index.php?action=site_settings
 RewriteRule ^profile/change_password_handler/?$ index.php?action=change_password_handler
@@ -55,7 +59,6 @@ RewriteRule ^profile/update_product/([0-9]+)/?$ index.php?action=update_product&
 RewriteRule ^profile/delete_product/([0-9]+)/?$ index.php?action=delete_product&id=$1
 RewriteRule ^profile/add_product?$ index.php?action=add_product
 RewriteRule ^profile/push_product?$ index.php?action=push_product
-# RewriteRule ^profile/edit_user?$ index.php?action=edit_user&id=1
 
 RewriteRule ^/?$ index.php
 

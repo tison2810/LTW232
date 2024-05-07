@@ -71,8 +71,20 @@ if (isset($_GET['action'])) {
     } elseif ($_GET['action'] == 'service') {
         require_once 'view/service.php';
         exit;
+    } elseif ($_GET['action'] == 'car_detail' && isset($_GET['id'])) {
+        require_once 'view/car_detail.php';
+        exit;
+    } elseif ($_GET['action'] == 'add_cart' && isset($_GET['id'])) {
+        require_once 'view/add_cart.php';
+        exit;
+    } elseif ($_GET['action'] == 'delete_cart' && isset($_GET['id'])) {
+        require_once 'view/delete_cart.php';
+        exit;
     } elseif ($_GET['action'] == 'shop') {
         require_once 'view/shop.php';
+        exit;
+    } elseif ($_GET['action'] == 'cart') {
+        require_once 'view/profile.php';
         exit;
     } elseif ($_GET['action'] == 'home') {
         require_once 'home.php';
@@ -88,9 +100,6 @@ if (isset($_GET['action'])) {
         exit;
     } elseif ($_GET['action'] == 'list') {
         require_once 'app/views/list.php';
-        exit;
-    } elseif ($_GET['action'] == 'cart') {
-        require_once 'app/views/cart.php';
         exit;
     } elseif ($_GET['action'] == 'detail') {
         require_once 'view/detail.php';

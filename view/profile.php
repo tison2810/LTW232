@@ -46,9 +46,9 @@ include_once ('navbar.php');
                 <div class="sidebar-item">THÔNG TIN XE</div>
                     <a class="item-select" href="#">Xe của tôi</a>
                 <div class="sidebar-item">ĐẶT HÀNG VÀ DỊCH VỤ</div>
+                    <a class="item-select" href="/profile/cart">Giỏ hàng</a><br>
                     <a class="item-select" href="#">Lịch sử giao dịch</a><br>
                     <a class="item-select" href="#">Bảo dưỡng sửa chữa</a><br>
-                    <a class="item-select" href="#">Thuê pin</a><br>
                 <div class="sidebar-item">TÀI KHOẢN</div>
                     <a class="item-select" href="/profile">Thông tin cá nhân</a><br>
                     <a class="item-select" href="/profile/change_info">Chỉnh sửa thông tin</a><br>
@@ -63,6 +63,9 @@ include_once ('navbar.php');
                                 break;
                             case 'change_password':
                                 require_once 'change_password.php';
+                                break;
+                            case 'cart':
+                                require_once 'cart.php';
                                 break;
                             case 'view_product':
                                 require_once 'view_product.php';

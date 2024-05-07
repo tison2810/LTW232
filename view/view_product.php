@@ -32,7 +32,7 @@
                             <td><?php echo $row["ID"] ?></td>
                             <td><?php echo $row["Ten"] ?></td>
                             <td>
-                                <img style="height: 100px; widtd: 200px;" src="<?php echo $row["Anh1"] ?>">
+                                <img style="height: 100px; width: 200px;" src="<?php echo $row["Anh1"] ?>">
                             </td>
                             <td><?php echo $row["GiaGomPin"] ?></td>
                             <td><?php echo $row["QuangDuongDiChuyen"] ?></td>

@@ -51,7 +51,8 @@ include_once ('navbar.php');
                                     <div class="card-body">
                                         <h5 class="card-title"><?php echo $row["Ten"] ?></h5>
                                         <p class="card-price"><?php echo $row["GiaGomPin"] ?> VNĐ</p>
-                                        <a href="detail.php?id=<?php echo $row["ID"] ?>" class="btn btn-primary">Mua ngay</a>
+                                        <!-- <p class="card-text"><?php echo $row["MoTa"] ?></p> -->
+                                        <a href="/car_detail/<?php echo $row["ID"] ?>" class="btn btn-primary">Mua ngay</a>
                                 </div>
                             </div>
                         </div>
