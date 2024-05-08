@@ -319,7 +319,7 @@
                 </div>
             </div>
             <div class="checkout">
-                <a id="checkout" class="button-checkout" href="#">THANH TOÁN</a>
+                <a id="checkout" class="button-checkout" href="/shop">THANH TOÁN</a>
             </div>
         </div>
     </div>

@@ -1,42 +1,21 @@
-<?php
-    $carName = "VF5";
-    // Prepare and bind
-    $conn = mysqli_connect("localhost","root","","vinfast");
-    $stmt = $conn->prepare("SELECT * FROM oto WHERE Ten = ?");
-    $stmt->bind_param("s", $carName);
-
-    // Execute the statement
-    $stmt->execute();
-
-    // Get the result
-    $result = $stmt->get_result();
-
-    // Fetch the data
-    if ($result->num_rows > 0) {
-        // Fetch the row
-        $row = $result->fetch_assoc();
-    } else {
-        echo "0 results";
-    }
-?>
 <div class="item-color active">
     <img style="width: 70%;"
-            src="<?php echo $row['Anh1']; ?>"
+            src="https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dw09fddd8d/images/PDP/VF5/vf5-4.png"
         alt="VF5 Black">
 </div>
 <div class="item-color">
     <img style="width: 70%;"
-        src="<?php echo $row['Anh2']; ?>"
+        src="https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dw2df39a3f/images/PDP/VF5/vf5-7.png"
         alt="VF5 White">
 </div>
 <div class="item-color">
     <img style="width: 70%;"
-        src="<?php echo $row['Anh3']; ?>"
+        src="https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dwe8ca0237/images/PDP/VF5/vf5-9.png"
         alt="VF5 Red">
 </div>
 <div class="item-color">
     <img style="width: 70%;"
-        src="<?php echo $row['Anh4']; ?>"
+        src="https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dwf7907695/images/PDP/VF5/vf5-1.png"
         alt="VF5 Blue">
 </div>
 <div class="info">

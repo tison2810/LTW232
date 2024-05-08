@@ -13,7 +13,7 @@ class UserRepository
 
     public function findAll()
     {
-        $sql = "SELECT * FROM khachhang";
+        $sql = "SELECT * FROM nguoidung";
         $stmt = $this->conn->prepare($sql);
         $stmt->execute();
         $usersData = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -27,7 +27,7 @@ class UserRepository
 
     public function findById($id)
     {
-        $sql = "SELECT * FROM khachhang WHERE ID = :id";
+        $sql = "SELECT * FROM nguoidung WHERE ID = :id";
         $stmt = $this->conn->prepare($sql);
         $stmt->bindParam(':id', $id, PDO::PARAM_INT);
         $stmt->execute();
@@ -37,7 +37,7 @@ class UserRepository
 
     public function findByEmail($email)
     {
-        $sql = "SELECT * FROM khachhang WHERE Email = :email";
+        $sql = "SELECT * FROM nguoidung WHERE Email = :email";
         $stmt = $this->conn->prepare($sql);
         $stmt->bindParam(':email', $email, PDO::PARAM_STR);
         $stmt->execute();
@@ -78,7 +78,7 @@ class UserRepository
 
     public function updateAdmin(User $user)
     {
-        $sql = "UPDATE khachhang SET 
+        $sql = "UPDATE nguoidung SET 
             HoTen = :name, 
             Email = :email, 
             SoDienThoai = :phone, 
@@ -105,7 +105,7 @@ class UserRepository
 
     public function updateUser(User $user)
     {
-        $sql = "UPDATE khachhang SET 
+        $sql = "UPDATE nguoidung SET 
         HoTen = :name, 
         MatKhau = :password,
         SoDienThoai = :phone, 
@@ -131,7 +131,7 @@ class UserRepository
 
     public function deleteUser(User $user)
     {
-        $sql = "DELETE FROM khachhang WHERE ID = :id";
+        $sql = "DELETE FROM nguoidung WHERE ID = :id";
         $stmt = $this->conn->prepare($sql);
         $stmt->bindParam(':id', $user->getId(), PDO::PARAM_INT);
         $stmt->execute();
@@ -141,7 +141,7 @@ class UserRepository
 
     public function createUser($name, $email, $password, $phone, $address, $role)
     {
-        $sql = "INSERT INTO khachhang (HoTen, Email, MatKhau, SoDienThoai, Diachi, Role) VALUES (:name, :email, :password, :phone, :address, :role)";
+        $sql = "INSERT INTO nguoidung (HoTen, Email, MatKhau, SoDienThoai, Diachi, Role) VALUES (:name, :email, :password, :phone, :address, :role)";
         $stmt = $this->conn->prepare($sql);
 
         $stmt->bindParam(':name', $name, PDO::PARAM_STR);

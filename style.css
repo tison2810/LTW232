@@ -91,7 +91,7 @@ body {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  display: block !important;
+  /* display: block !important; */
 }
 .button-resigter-receive-info {
   display: flex;
