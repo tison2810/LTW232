@@ -26,9 +26,6 @@ if (isset($_GET['action'])) {
         $userController->register();
     } elseif ($_GET['action'] == 'login') {
         $userController->login();
-    } elseif ($_GET['action'] == 'dashboard') {
-        require_once 'app/views/dashboard.php';
-        exit;
     } elseif ($_GET['action'] == 'view_product') {
         $adminController->index_pro();
         exit;
@@ -91,18 +88,6 @@ if (isset($_GET['action'])) {
         exit;
     } elseif ($_GET['action'] == 'home') {
         require_once 'home.php';
-        exit;
-    } elseif ($_GET['action'] == 'news') {
-        require_once 'app/views/news.php';
-        exit;
-    } elseif ($_GET['action'] == 'payment') {
-        require_once 'app/views/payment.php';
-        exit;
-    } elseif ($_GET['action'] == 'contact') {
-        require_once 'app/views/contact.php';
-        exit;
-    } elseif ($_GET['action'] == 'list') {
-        require_once 'app/views/list.php';
         exit;
     } elseif ($_GET['action'] == 'detail') {
         require_once 'view/detail.php';

@@ -8,7 +8,6 @@ RewriteRule ^create_user/?$ index.php?action=create_user
 
 
 # Rewrite URLs for admin actions
-RewriteRule ^dashboard/?$ index.php?action=dashboard
 RewriteRule ^admin/?$ index.php?action=view_user
 RewriteRule ^admin/edit/([0-9]+)/?$ index.php?action=edit_user&id=$1
 RewriteRule ^admin/update/([0-9]+)/?$ index.php?action=update_user&id=$1
@@ -29,11 +28,6 @@ RewriteRule ^detail/vf7/?$ index.php?action=vf7
 RewriteRule ^detail/vf8/?$ index.php?action=vf8
 RewriteRule ^detail/vf9/?$ index.php?action=vf9
 RewriteRule ^detail/vfe34/?$ index.php?action=vfe34
-RewriteRule ^news/?$ index.php?action=news
-RewriteRule ^payment/?$ index.php?action=payment
-RewriteRule ^contact/?$ index.php?action=contact
-RewriteRule ^list/?$ index.php?action=list
-RewriteRule ^cart/?$ index.php?action=cart
 
 
 # Rewrite URLs for profile actions
@@ -42,7 +36,6 @@ RewriteRule ^update_profile/?$ index.php?action=update_profile
 RewriteRule ^profile/change_info/?$ index.php?action=change_info
 RewriteRule ^profile/cart/?$ index.php?action=cart
 RewriteRule ^profile/change_password/?$ index.php?action=change_password
-RewriteRule ^profile/site_settings/?$ index.php?action=site_settings
 RewriteRule ^profile/change_password_handler/?$ index.php?action=change_password_handler
 RewriteRule ^profile/delete_account/?$ index.php?action=delete_account
 

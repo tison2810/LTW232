@@ -15,8 +15,8 @@
                             <th scope="col">Ảnh</th>
                             <th scope="col">Giá (Gồm Pin)</th>
                             <th scope="col">Quãng đường di chuyển</th>
-                            <th scope="col">Edit</th>
-                            <th scope="col">Delete</th>
+                            <th scope="col">Sửa</th>
+                            <th scope="col">Xóa</th>
                         </tr>
                     </thead>
                     <?php
@@ -29,15 +29,15 @@
                     ?>
                     <tbody>
                         <tr class="justify-content-center">
-                            <td><?php echo $row["ID"] ?></td>
-                            <td><?php echo $row["Ten"] ?></td>
+                            <td style="text-align:center"><?php echo $row["ID"] ?></td>
+                            <td style="text-align:center"><?php echo $row["Ten"] ?></td>
                             <td>
                                 <img style="height: 100px; width: 200px;" src="<?php echo $row["Anh1"] ?>">
                             </td>
-                            <td><?php echo $row["GiaGomPin"] ?></td>
-                            <td><?php echo $row["QuangDuongDiChuyen"] ?></td>
-                            <td><a href="/profile/edit_product/<?php echo $row["ID"]; ?>" style="text-decoration: none";>Edit</a></td>
-                            <td><a href="/profile/delete_product/<?php echo $row["ID"]; ?>" style="text-decoration: none";>Delete</a></td>
+                            <td style="text-align:center"><?php echo $row["GiaGomPin"] ?></td>
+                            <td style="text-align:center"><?php echo $row["QuangDuongDiChuyen"] ?></td>
+                            <td style="text-align:center"><a href="/profile/edit_product/<?php echo $row["ID"]; ?>" style="text-decoration: none";>Sửa</a></td>
+                            <td style="text-align:center"><a href="/profile/delete_product/<?php echo $row["ID"]; ?>" style="text-decoration: none";>Xóa</a></td>
                         </tr>
                     </tbody>
                     <?php

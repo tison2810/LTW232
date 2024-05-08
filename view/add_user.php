@@ -1,5 +1,5 @@
 <div class="change-info">
-    <div class="component"><div class="title" style="font-weight: bold;">CHỈNH SỬA THÔNG TIN</div></div>
+    <div class="component"><div class="title" style="font-weight: bold;">TẠO TÀI KHOẢN</div></div>
     <div class="change-info-form">
         <form action="/create_user" method="POST">
             <input class="form-control mt-3" type="text" name="email" id="email" placeholder="Email">

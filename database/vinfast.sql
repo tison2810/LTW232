@@ -96,15 +96,6 @@ CREATE TABLE DangKyTuVan (
     PRIMARY KEY(ID)
 );
 
-CREATE TABLE NhanVien (
-    ID INT AUTO_INCREMENT,
-    Email VARCHAR(20) NOT NULL,
-    MatKhau VARCHAR(20) NOT NULL,
-    HoTen VARCHAR(255) NOT NULL,
-    SoDienThoai CHAR(10) NOT NULL,
-    PRIMARY KEY (ID)
-);
-
 
 INSERT INTO Oto VALUES (1, 'VF 5 Plus', 
                         'https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dw09fddd8d/images/PDP/VF5/vf5-4.png',
