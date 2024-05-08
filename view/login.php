@@ -21,10 +21,6 @@
 	<br/><br/>
 	<div class = "limiter">
 		<div class="container-login100">
-			<!-- <div class="content__left">
-				<div class="login100-more" style="background-image: url('https://lh3.googleusercontent.com/pobuAfGspbPGYKNqPTzeBvYcZb8-KHcJ18Yre2y38u9lbNEC0LV5t37Byk1PdhHQpDw')">
-				</div>
-			</div> -->
 			<div class="container mt-3" style="width: 400px">
 				<form action="../index.php?action=login" method="POST">
                     <div class="row">

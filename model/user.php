@@ -85,28 +85,57 @@ class User {
     
     public function setName($name) {
         if (strlen($name) < 3 || strlen($name) > 50) {
-            throw new InvalidArgumentException("Name must be between 3 and 50 characters");
+            try {
+                throw new InvalidArgumentException("Name must be between 3 and 50 characters");
+            } catch (InvalidArgumentException $e) {
+                $errorMessage = "Name must be between 3 and 50 characters";
+                header("Location: " . $_SERVER['HTTP_REFERER'] . "?error=" . urlencode($errorMessage));
+                exit();
+            }
+            // throw new InvalidArgumentException("Name must be between 3 and 50 characters");
         }
         $this->name = $name;
     }
 
     public function setEmail($email) {
         if (!filter_var($email, FILTER_VALIDATE_EMAIL) || strlen($email) > 100) {
-            throw new InvalidArgumentException("Invalid email address or email address exceeds 100 characters");
+            try {
+                throw new InvalidArgumentException("Email must be a valid email address and must not exceed 100 characters");
+            } catch (InvalidArgumentException $e) {
+                $errorMessage = "Email must be a valid email address and must not exceed 100 characters";
+                header("Location: " . $_SERVER['HTTP_REFERER'] . "?error=" . urlencode($errorMessage));
+                exit();
+            }
+            // echo "<script type='text/javascript'>alert('Invalid email address or email address exceeds 100 characters');</script>";
+            // throw new InvalidArgumentException("Invalid email address or email address exceeds 100 characters");
                 }
         $this->email = $email;
     }
 
     public function setPassword($password) {
         if (strlen($password) < 8 || strlen($password) > 100) {
-            throw new InvalidArgumentException("Password must be between 8 and 100 characters");
+            // throw new InvalidArgumentException("Password must be between 8 and 100 characters");
+            try {
+                throw new InvalidArgumentException("Password must be between 8 and 100 characters");
+            } catch (InvalidArgumentException $e) {
+                $errorMessage = "Password must be between 8 and 100 characters";
+                header("Location: " . $_SERVER['HTTP_REFERER'] . "?error=" . urlencode($errorMessage));
+                exit();
+            }
         }
         $this->password = $password;
     }
 
     public function setPhone($phone) {
-        if (strlen($phone) > 20) {
-            throw new InvalidArgumentException("Phone number must not exceed 20 characters");
+        if (strlen($phone) != 10) {
+            // throw new InvalidArgumentException("Phone number must not exceed 20 characters");
+            try {
+                throw new InvalidArgumentException("Phone number must be 10 characters");
+            } catch (InvalidArgumentException $e) {
+                $errorMessage = "Phone number must be 10 characters";
+                header("Location: " . $_SERVER['HTTP_REFERER'] . "?error=" . urlencode($errorMessage));
+                exit();
+            }
         }
         $this->phone = $phone;
     }

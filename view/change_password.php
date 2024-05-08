@@ -12,7 +12,10 @@
             alert("The new password and confirmation password do not match.");
             return false;
         }
-
+        if (newPassword.length < 8 || newPassword.length > 100) {
+            alert("Password must be between 8 and 100 characters");
+            return false;
+        }
         return true;
     }
 </script>

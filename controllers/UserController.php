@@ -35,6 +35,8 @@ class UserController
                 exit;
             } else {
                 $errorMessage = 'Incorrect email or password';
+                echo "<script type='text/javascript'>alert('$errorMessage');</script>";
+                
             }
         }
         require_once 'view/login.php';
@@ -56,6 +58,7 @@ class UserController
                 exit;
             } else {
                 $errorMessage = 'Incorrect email or password';
+                echo "<script type='text/javascript'>alert('$errorMessage');</script>";
             }
         }
         require_once 'view/login.php';

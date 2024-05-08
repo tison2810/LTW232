@@ -35,20 +35,6 @@ class UserRepository
         return $this->createUserFromData($userData);
     }
 
-    // public function findByEmail($email)
-    // {
-    //     $sql = "SELECT * FROM KhachHang WHERE Email = :email";
-    //     $stmt = $this->conn->prepare($sql);
-    //     $stmt->bindParam(':email', $email, PDO::PARAM_STR);
-    //     $stmt->execute();
-    //     $userData = $stmt->fetch(PDO::FETCH_ASSOC);
-
-    //     if ($userData) {
-    //         return $this->createUserFromData($userData);
-    //     }
-    //     return null;
-    // }
-
     public function findByEmail($email)
     {
         $sql = "SELECT * FROM khachhang WHERE Email = :email";
@@ -58,11 +44,6 @@ class UserRepository
         $userData = $stmt->fetch(PDO::FETCH_ASSOC);
 
         if ($userData) {
-            // if ($userData) {
-            //     print_r($userData);
-                // Or if you want formatted output:
-                // echo '<pre>', print_r($userData, true), '</pre>';
-            // }
             return $this->createUserFromData($userData);
         }
         return null;
@@ -77,11 +58,6 @@ class UserRepository
         $userData = $stmt->fetch(PDO::FETCH_ASSOC);
 
         if ($userData) {
-            // if ($userData) {
-            //     print_r($userData);
-                // Or if you want formatted output:
-                // echo '<pre>', print_r($userData, true), '</pre>';
-            // }
             return $this->createUserFromData($userData);
         }
         return null;

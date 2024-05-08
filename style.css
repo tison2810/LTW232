@@ -88,10 +88,10 @@ body {
   text-decoration: none;
 }
 .button-account {
-  flex-grow: 1;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  display: block !important;
 }
 .button-resigter-receive-info {
   display: flex;
