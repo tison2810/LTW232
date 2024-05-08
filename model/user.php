@@ -93,7 +93,7 @@ class User {
     public function setEmail($email) {
         if (!filter_var($email, FILTER_VALIDATE_EMAIL) || strlen($email) > 100) {
             throw new InvalidArgumentException("Invalid email address or email address exceeds 100 characters");
-        }
+                }
         $this->email = $email;
     }
 

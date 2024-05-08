@@ -55,10 +55,28 @@ class AuthenticateService {
         if ($this->is_email_exist($email)) {
             return [
                 'success' => false,
-                'message' => 'Error: Email already in use'
+                'message' => 'Email already in use'
             ];
         }
-        
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL) || strlen($email) > 100) {
+            return [
+                'message' => 'Invalid email'
+            ];
+        }
+        if (strlen($name) < 3 || strlen($name) > 50) {
+            return [
+                'message' => 'Name must be between 3 and 50 characters"'];
+        }
+        if (strlen($password) < 8 || strlen($password) > 100) {
+            return [
+                'message' => 'Password must be between 8 and 100 characters'
+            ];
+        }
+        if (strlen($phone) != 10) {
+            return [
+                'message' => 'Phone number must be 10 characters'
+            ];
+        }
         $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
         $createUserResult = $this->userRepository->createUser($name, $email, $hashedPassword, $phone, $address, $role);
     

@@ -94,6 +94,7 @@ class UserController
                 exit;
             } else {
                 $errorMessage = $registerResult['message'];
+                echo "<script type='text/javascript'>alert('$errorMessage');</script>";
             }
         }
 
@@ -125,8 +126,8 @@ class UserController
         $loggedInUser->setName($data['name']);
         $loggedInUser->setPhone($data['phone']);
         $loggedInUser->setAddress($data['address']);
-        $loggedInUser->setEmail($data['email']);
-        $loggedInUser->setRole($data['role']);
+        // $loggedInUser->setEmail($data['email']);
+        // $loggedInUser->setRole($data['role']);
 
         $this->userRepository->updateUser($loggedInUser);
         header('Location: /profile');

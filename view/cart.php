@@ -96,9 +96,8 @@
                 <table class="table">
                 <thead>
                     <tr style="text-align:center">
-                    <th scope="col">Tên</th>
-                        <th scope="col">Ảnh</th>
-                        
+                        <th scope="col">Tên</th>
+                        <th scope="col">Ảnh</th> 
                         <th scope="col">Giá (Gồm Pin)</th>  
                         <th scope="col">Số lượng</th>
                         <th scope="col">Edit</th>

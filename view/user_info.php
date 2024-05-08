@@ -15,10 +15,10 @@
 			<div class="email" style="font-size: 14px"><?= $user->getEmail(); ?></div>
 			<div class="phone" style="font-size: 14px"><?= $user->getPhone(); ?></div>
 			<br></br>
-			<a class="password" style="font-size: 14px; text-decoration: none;" href="#">Đổi mật khẩu</a>
+			<a class="password" style="font-size: 14px; text-decoration: none;" href="/profile/change_password">Đổi mật khẩu</a>
 		</div>
 	</div>
 	<div class="edit">
-		<a class="edit-profile" href="#">Chỉnh sửa thông tin</a>
+		<a class="edit-profile" href="/profile/change_info">Chỉnh sửa thông tin</a>
 	</div>
 </div>
